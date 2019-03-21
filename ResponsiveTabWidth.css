@@ -1,0 +1,13 @@
+/*
+ * Responsive tab width
+ * TODO: make tabbar full width, shrink active tab
+ */
+.tabbrowser-tab[selected]:not([pinned]) {
+  min-width: calc(var(--tab-min-width) + 50px) !important;
+}
+
+
+.tabbrowser-tab:not([pinned]) {
+/* 	transition: min-width 100ms ease-out, max-width 100ms ease-out; */
+}
+

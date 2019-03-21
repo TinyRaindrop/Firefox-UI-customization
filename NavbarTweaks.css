@@ -1,0 +1,9 @@
+/*
+ * Remove border between Tabs and NavBar
+ */
+#nav-bar {
+  border: none !important;
+  box-shadow: none !important;
+  margin-bottom: -1px !important;
+}   
+

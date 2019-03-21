@@ -1,0 +1,16 @@
+/*
+ * Addons overflow menu
+ */
+#overflowMenu-customize-button {
+  display: none !important;
+}
+
+#widget-overflow-fixed-list {
+  display: flex !important;
+}
+
+#widget-overflow-fixed-list .toolbarbutton-text {
+  display: none !important;
+}
+
+/* #widget-overflow-fixed-list .toolbarbutton-badge-stack { } */

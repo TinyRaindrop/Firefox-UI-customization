@@ -1,0 +1,9 @@
+/* Flag multi-selected tabs */
+.tabbrowser-tab[multiselected="true"] .tab-content::before {
+  content: "●"; 
+  position: absolute;
+  margin: -18px 0 0 -9px;
+  padding: 0 2px;
+  color:darkorange;
+  font-size: 11px;
+}

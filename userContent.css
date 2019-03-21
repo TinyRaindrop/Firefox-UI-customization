@@ -1,0 +1,120 @@
+:root {
+  --equilux: #373737;
+  --arc-dark-toolbar: #2F343F;
+  --arc-dark-urlbar: #404552;
+
+  /* Main Color */
+  --main-color: var(--arc-dark-toolbar);
+  
+  /* scroller - background // auto / thin / <width>; */ 
+  /* scrollbar-color: var(--lwt-toolbar-field-focus) var(--toolbar-bgcolor); */
+  scrollbar-color: rgb(95, 103, 118) rgb(56, 60, 74);		
+  scrollbar-width: thin;
+}
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url-prefix("about:") {
+  page,
+  scrollbar {
+    scrollbar-color: rgb(95, 103, 118) rgb(56, 60, 74);	
+    scrollbar-width: thin;
+  }
+}
+
+/* Scrollbar colors and width - applied globally */
+@namespace url("http://www.w3.org/1999/xhtml");
+
+:root { scrollbar-color: rgb(95, 103, 118) rgb(56, 60, 74); }
+* { scrollbar-width: thin }
+
+
+/* More homepage styling here :
+ * https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme/blob/master/Full%20dark%20theme/userContent.css
+ */
+
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing), url(about:blank) {
+	html:not(#ublock0-epicker) body { 
+		background-color: var(--main-color) !important;
+	}
+	
+	/* Hide scrollbar */ 	
+	:root{
+		scrollbar-width: none !important;
+	}
+}
+
+@-moz-document url(about:newtab), url(about:home) { 
+	/* Disable scrolling on New tab page */ 	
+	body {
+		overflow-y: hidden !important; 
+		--newtab-card-background-color: #313135 !important;
+	}
+	
+	/* new tab bg */
+	.outer-wrapper {
+    /* background-color: var(--main-color) !important; */
+		background-image: url(Backgrounds/osman-rana-263707-unsplash-FF.jpg) !important;
+		background-size: cover !important;
+		background-attachment: fixed !important;
+		background-position: center !important;
+	}
+  
+  	/* featured cards title bg */
+  /*  .card, .prefs-pane .sidebar {
+      background-color:#202020 !important;
+   } */
+   
+    /* featured cards title text */
+   /*#snippets, .section-title, .snippetContainer, .card-title, .card-description {
+      color: #AEAEAE !important;
+   }*/
+  
+  .top-site-outer .tile {
+    border-radius: 2px !important;
+  }
+    
+  .top-site-outer .screenshot {
+    background-position: top center !important;
+    background-size: 120px !important;
+    border-radius: 2px !important;
+  }
+    
+	.top-sites-list .top-site-outer .rich-icon {
+		background-size: 86px !important;
+		border-radius: 2px !important;
+	}
+	
+	.top-sites-list .top-site-outer .default-icon {
+		/* background-size: 24px !important; */
+	}
+	
+	.card-outer { 
+		border-radius: 1px !important; /* 1px is for sharp edges */
+		box-shadow: 0 14px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22) !important;
+	}
+  
+   /* .top-sites-list .top-site-outer .title span { color:#D1D1D1; } */
+   
+
+/* 	.top-site-outer .tile {
+		width: 156px !important;
+		height: 96px !important;
+	}
+
+	main {
+		width: 1146px !important;
+		padding-bottom: 0px !important;
+	}
+ */
+  
+} 
+
+/* Remove dotted outline from clicked links and buttons */
+/* a:focus, a:active,
+button::-moz-focus-inner {
+  outline: none !important;
+} */
+
+/* :focus {outline:none;} */
+/* ::-moz-focus-inner {border:0;} */
+

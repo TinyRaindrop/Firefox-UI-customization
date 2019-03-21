@@ -1,0 +1,84 @@
+@import "./AddonsOverflowMenu.css";
+@import "./BookmarkToolbarOnNewTab.css";
+@import "./CleanedUpContextMenus.css";
+@import "./DarkModalPrompts.css";
+@import "./FindbarTopCentered.css";
+@import "./NavbarTweaks.css";
+@import "./OperaStyleTabSeparators.css";
+@import "./TabCloseButtonOnHover.css";
+@import "./TabSoundIconOnLeftSide.css";
+@import "./TabTitleTweaks.css";
+@import "./UrlbarTweaks.css";
+
+/* Disabled */
+/* @import "./FlagMultiSelectedTabs.css"; */
+/* @import "./ResponsiveTabWidth.css"; */
+/* @import "./ShowMenubarOnToolbarHover.css"; */
+
+
+/* Is namespace even needed? */
+/* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
+
+
+/* Remove extra padding from tabs toolbar */
+.titlebar-spacer[type="pre-tabs"] {
+  width: 0 !important;
+}
+
+.titlebar-spacer[type="post-tabs"] {
+  width: 10px !important;
+}
+
+
+/* Minimal Popup scrollbars */ 
+/* https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/minimal_popup_scrollbars.css */
+.panel-subview-body, 
+#bookmarksPanel scrollbar,
+#history-panel scrollbar { 
+  /*! scrollbar-color: rgb(210,210,210) var(--uc-dark-bkgnd-color, var(--arrowpanel-background)) !important; */ 
+  scrollbar-width: thin !important;
+}
+
+
+/* Disable Fullscreen warning */
+#fullscreen-warning {
+  display: none !important;
+}
+
+
+/* Whiteflash fix */
+#browser vbox#appcontent tabbrowser,
+#content, #tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content] > html { 
+  background: var(--in-content-page-background) !important;
+}
+
+
+/**
+ * Compact Sidebar Bookmarks for Firefox Quantum
+ * Github: https://github.com/rkocman/Firefox-Sidebar-Tweak
+ * Tested on: Windows 7/10, Firefox 59+
+ */
+
+#sidebar-header {
+    font-size: 1.21em !important;
+    padding: 4px 8px !important;
+}
+#sidebar-search-container {
+    padding: 5px 8px !important;
+}
+.sidebar-placesTree treechildren::-moz-tree-row {
+    height: 1.6em !important;
+    min-height: 1.6em !important;
+    border-width: 1px !important;
+}
+.sidebar-placesTree treechildren::-moz-tree-indentation {
+    width: 10px !important;
+}
+.sidebar-placesTree treechildren::-moz-tree-twisty {
+    padding-inline-start: 0 !important;
+    padding-inline-end: 2px !important;
+}
+
+

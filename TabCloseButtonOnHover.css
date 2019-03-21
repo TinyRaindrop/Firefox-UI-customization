@@ -1,0 +1,10 @@
+/*
+ * Show close buttons on tabs only on hover
+ */
+.tabbrowser-tab .tab-close-button {
+  display: none !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: -moz-box !important;
+}

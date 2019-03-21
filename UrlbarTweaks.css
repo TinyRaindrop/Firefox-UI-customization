@@ -1,0 +1,71 @@
+/* 
+ * URLbar 
+ */
+
+#urlbar .urlbar-input-box {
+  text-align: center;
+  margin: auto !important;
+}
+
+/* Remove placeholder text in the address bar */
+.urlbar-input-box > .urlbar-input::placeholder {
+  opacity: 0 !important;
+} 
+
+
+/* 
+ * Fix shifting of centered URL
+ * Example - https://i.imgur.com/hCE0nQj.png 
+ */
+
+#urlbar[pageproxystate="invalid"] > #identity-box > #connection-icon,
+#urlbar[pageproxystate="valid"]   > #identity-box.unknownIdentity > #connection-icon,
+#urlbar[pageproxystate="invalid"] > #page-action-buttons > #pageActionButton,
+#urlbar[pageproxystate="invalid"] > #page-action-buttons > #star-button-box {
+  display: -moz-box !important; 
+  visibility: hidden !important;
+}
+
+/* Disable some useless buttons */
+#urlbar .urlbar-go-button,
+#urlbar .urlbar-history-dropmarker {
+  display: none !important;
+}
+
+
+/*  
+ * Show HTTPS certificate label only on hover
+ */
+#identity-box:not(:hover) #identity-icon-labels {
+  display: none;
+}
+
+/* Keep consistent margin across all URL states. Needed after hiding Identity label */
+	/* 	#urlbar[pageproxystate="valid"] > #identity-box.notSecure,
+		#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain, */
+/* this is equivalent, just apply unconditionally */
+#urlbar > #identity-box {
+	padding-inline-end: 8px !important;
+}
+
+
+/* Shift container label position in address bar Up Left a bit */
+#userContext-icons #userContext-label {
+  margin-bottom: 4px !important;
+  margin-inline-end: 4px !important;
+}
+
+
+/* Clean up page action ... menu from the right side of URLbar */
+#pageActionPanelMainView #pageAction-panel-bookmark,
+#pageActionPanelMainView #pageAction-panel-copyURL {
+  display: none !important;
+}
+
+
+/* Gives the address bar darker background in a private browsing window. */
+#main-window[privatebrowsingmode="temporary"] #urlbar
+{
+  background: #303030 !important;
+}
+
