@@ -34,4 +34,4 @@ Min/max/close buttons stand out because on my Windows 8.1 they are controlled by
 ## Big thanks to
 
 - [MrOtherGuy](https://github.com/MrOtherGuy/firefox-csshacks)
-- [Timvde's repo](https://github.com/Timvde/UserChrome-Tweaks)
+- [Izheil](https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme)
