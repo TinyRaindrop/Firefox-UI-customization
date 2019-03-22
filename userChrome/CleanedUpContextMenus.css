@@ -1,6 +1,7 @@
-/*
+/**
  * Cleaner Context Menu
  */
+
 /* page menu */
 #contentAreaContextMenu #context-openlink,    /* in new window */
 #contentAreaContextMenu #context-bookmarklink,
@@ -23,30 +24,17 @@
   display: none !important; 
 }
 
-
-
-/* #tabContextMenu menuitem:nth-of-type(n+1) {
-  -moz-box-ordinal-group: 2;
-}
-
-#tabContextMenu #_c2c003ee-bd69-42a2-b0e9-6f34222cb046_-menuitem-1 {
-  -moz-box-ordinal-group: 1;
-}
- */
-/* 
+/** 
  * Cleaner Bookmark menu 
  */
 #BMB_bookmarksShowAllTop, 
-#BMB_bookmarksShowAllTop+menuseparator,
+#BMB_bookmarksShowAllTop + menuseparator,
 #BMB_viewBookmarksSidebar,
 #BMB_viewBookmarksToolbar,
 /*#BMB_bookmarksToolbar, */
 /*#BMB_unsortedBookmarks, */
 /*#BMB_bookmarksShowAll,  */
-#BMB_viewBookmarksToolbar+menuseparator,
-#BMB_mobileBookmarks+menuseparator {
+#BMB_viewBookmarksToolbar + menuseparator,
+#BMB_mobileBookmarks + menuseparator {
   display: none !important;
 }
-
-
-

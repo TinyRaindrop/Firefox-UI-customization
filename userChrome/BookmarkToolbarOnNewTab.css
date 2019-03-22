@@ -1,6 +1,7 @@
-/* 
- * Bookmarks toolbar is visible at the bootom of new tab page.
+/**
+ * Bookmarks toolbar is visible at the bootom of new tab page only on hover.
  */
+
 #PersonalToolbar {
 /*   visibility: collapse !important; */
   opacity: 0 !important;
@@ -23,14 +24,9 @@
 }
 
 /* Center bookmarks on the bar */
-#PersonalToolbar #PlacesToolbar #PlacesToolbarItems {
-/*   display: flex !important; */
-}
-
-/* #main-window[title^="Mozilla Firefox"] #PersonalToolbar { */
-/* #main-window[title^="Mozilla Firefox"] #nav-bar:hover + #PersonalToolbar,
-#main-window[title^="Нова вкладка"] #nav-bar:hover + #PersonalToolbar,
-#PersonalToolbar:hover { */
+/* #PersonalToolbar #PlacesToolbar #PlacesToolbarItems {
+  
+} */
 
 #main-window[title^="Mozilla Firefox"] #PersonalToolbar:hover,
 #main-window[title^="Нова вкладка"] #PersonalToolbar:hover {
@@ -41,9 +37,8 @@
 #main-window[title^="Нова вкладка"] #PersonalToolbar:hover #PlacesToolbar {
   visibility: visible !important;
 }
- 
 
-/* Shorter and wider separators */
+/* Shorter separators with wider margins */
 #PlacesToolbar toolbarseparator {
   margin: 5px 12px !important;
   opacity: 0.40 !important;

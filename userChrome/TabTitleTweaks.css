@@ -1,13 +1,13 @@
-/*
- * Dim discarded tabs
+/**
+ * Changes, related to tabbar
  */
+
+/* Dim discarded tabs */
 .tabbrowser-tab[pending] {
   opacity: .70 !important;
 }
 
-/*
- * Reduce tab title gradient
- */
+/* Reduce tab title gradient */
 .tabbrowser-tab:not([pinned]) .tab-content {
   padding-inline-end: 6px !important;
 }
@@ -17,9 +17,7 @@
 	mask-image: linear-gradient(to left, transparent, black 1.3em) !important;
 }
 
-/*
- * Highlight tabs that were changed or shared from other devices by adding small colored line
- */
+/* Highlight tabs that were changed or shared from other devices by adding a small colored line */
 .tab-label[attention]:not([selected="true"]) {
 	font-weight: normal  !important;
 }	
@@ -29,20 +27,12 @@
 	background-image: none !important;
 }
 
-/* 
- #9b59b6 - purple
- #3498db - blue
- #1abc9c - green
-*/
-:root {
-	--tab-attention-line-color: #1abc9c;
-}
-
 .tabbrowser-tab[attention] > .tab-stack > .tab-background > .tab-bottom-line {
-	background: linear-gradient(to right, transparent 33%, var(--tab-attention-line-color) 35% 65%, transparent 67%) !important;
+	background: linear-gradient(to right, transparent 33%, #1abc9c 35% 65%, transparent 67%) !important;
 	height: 1px !important;
 }
 
+/* Make tabs wider */
 /* .tabbrowser-tab:not([pinned]) {
 	max-width: 300px !important;
 } */

@@ -1,9 +1,15 @@
-/*
- * Remove border between Tabs and NavBar
+/**
+ * Tweaks concerning NavBar area
  */
+
+/* Remove border between Tabs and NavBar */
 #nav-bar {
   border: none !important;
   box-shadow: none !important;
   margin-bottom: -1px !important;
 }   
 
+/* Keep Navbar on top during Findbar/Bookmark bar sliding animations */
+#nav-bar {
+  z-index: 1;
+}

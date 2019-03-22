@@ -1,14 +1,12 @@
-/*
+/**
  * Addons overflow menu
  */
-#overflowMenu-customize-button {
-  display: none !important;
-}
 
-#widget-overflow-fixed-list {
+ #widget-overflow-fixed-list {
   display: flex !important;
 }
 
+#overflowMenu-customize-button,
 #widget-overflow-fixed-list .toolbarbutton-text {
   display: none !important;
 }

@@ -1,3 +1,7 @@
+/**
+ * Make JS alert, prompt and confirm modals dark 
+ */
+
 @keyframes fade-in {
 	0%   { opacity: 0; }
 	100% { opacity: 1; }
@@ -52,7 +56,6 @@ tabmodalprompt .tabmodalprompt-mainContainer .tabmodalprompt-topContainer textbo
 tabmodalprompt .tabmodalprompt-mainContainer .tabmodalprompt-topContainer textbox[focused="true"] {
 	background-color: var(--lwt-toolbar-field-focus, var(--lwt-toolbar-field-background-color, white)) !important;
 }
-
 
 tabmodalprompt .tabmodalprompt-mainContainer .tabmodalprompt-topContainer checkbox {
 /*	margin: 12px 0 0 0 !important;*/

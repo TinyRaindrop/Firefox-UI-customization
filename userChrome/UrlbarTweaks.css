@@ -1,17 +1,12 @@
-/* 
- * URLbar 
+/**
+ * Center address in urlbar and prevent it from shifting.
+ * Hide unnecessary elements to clean up UI.
  */
 
 #urlbar .urlbar-input-box {
-  text-align: center;
   margin: auto !important;
+  text-align: center;
 }
-
-/* Remove placeholder text in the address bar */
-.urlbar-input-box > .urlbar-input::placeholder {
-  opacity: 0 !important;
-} 
-
 
 /* 
  * Fix shifting of centered URL
@@ -32,22 +27,15 @@
   display: none !important;
 }
 
-
-/*  
- * Show HTTPS certificate label only on hover
- */
+/* Show SSL certificate label only on hover */
 #identity-box:not(:hover) #identity-icon-labels {
   display: none;
 }
 
 /* Keep consistent margin across all URL states. Needed after hiding Identity label */
-	/* 	#urlbar[pageproxystate="valid"] > #identity-box.notSecure,
-		#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain, */
-/* this is equivalent, just apply unconditionally */
 #urlbar > #identity-box {
 	padding-inline-end: 8px !important;
 }
-
 
 /* Shift container label position in address bar Up Left a bit */
 #userContext-icons #userContext-label {
@@ -55,15 +43,13 @@
   margin-inline-end: 4px !important;
 }
 
-
-/* Clean up page action ... menu from the right side of URLbar */
+/* Clean up page action menu (...) on the right side of URLbar */
 #pageActionPanelMainView #pageAction-panel-bookmark,
 #pageActionPanelMainView #pageAction-panel-copyURL {
   display: none !important;
 }
 
-
-/* Gives the address bar darker background in a private browsing window. */
+/* Give the address bar darker background in a private browsing window. */
 #main-window[privatebrowsingmode="temporary"] #urlbar
 {
   background: #303030 !important;

@@ -1,6 +1,7 @@
-/*
+/**
  * Show close buttons on tabs only on hover
  */
+ 
 .tabbrowser-tab .tab-close-button {
   display: none !important;
 }

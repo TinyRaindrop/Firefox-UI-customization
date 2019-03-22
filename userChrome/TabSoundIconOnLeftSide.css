@@ -1,16 +1,15 @@
-/*
- * Description: Moves the sound indicator to the left of the tab, shrinks it a little and overlays the favicon
- *
+/**
+ * Move the sound indicator to the left of the tab and make it smaller
  * Screenshot: https://i.imgur.com/XVyGNMG.png
- *
+ * 
  * Contributor(s): BubiBalboa via reddit.com/user/marciiF
  */
 
 .tab-icon-sound {
-  -moz-box-ordinal-group: 0 !important;
   border-radius: 50% !important;
   margin: initial !important;
   margin-right: -16px !important;
+  -moz-box-ordinal-group: 0 !important;
   opacity: 1 !important;
   transform: translate(35%, -35%) !important;
 }
@@ -34,15 +33,3 @@
 .tab-icon-sound[activemedia-blocked] {
   list-style-image: url(chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg) !important;
 }
-
-/* .tab-icon-sound[soundplaying]:-moz-lwtheme-brighttext {
-  list-style-image: url(chrome://browser/skin/tabbrowser/tab-audio-white-small.svg) !important;
-}
-
-.tab-icon-sound[muted]:-moz-lwtheme-brighttext {
-  list-style-image: url(chrome://browser/skin/tabbrowser/tab-audio-white-muted-small.svg) !important;
-}
-
-.tab-icon-sound[activemedia-blocked]:-moz-lwtheme-brighttext {
-  list-style-image: url(chrome://browser/skin/tabbrowser/tab-audio-white-blocked-small.svg) !important;
-} */

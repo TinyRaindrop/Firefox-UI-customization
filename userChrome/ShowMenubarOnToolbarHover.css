@@ -1,4 +1,6 @@
-/* Show menubar on toolbar hover */
+/**
+ * Show menubar on toolbar hover 
+ */
 
 #toolbar-menubar {
   -moz-window-dragging: no-drag !important;

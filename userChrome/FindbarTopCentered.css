@@ -1,46 +1,41 @@
-/*
- * Findbar 
+/**
+ * Findbar on top of the page with centered elements
  */
 
 findbar {
-  --findbarbutton-vertical-padding: 4px;
-  -moz-box-ordinal-group: 0; 
-  position: relative;
-  margin-top: -4px !important;
-  margin-bottom: calc(-2 * var(--findbarbutton-vertical-padding) - 22px);
-  padding-bottom: 2px;
+  background: var(--toolbar-bgcolor) !important;  /* or --lwt-accent-color for contrast */ 
   border-top: none !important;
+  --findbarbutton-vertical-padding: 4px;
+  margin-top: -4px;
+  margin-bottom: calc(-2 * var(--findbarbutton-vertical-padding) - 22px);
+  -moz-box-ordinal-group: 0; 
+  padding-bottom: 2px;
+  position: relative;
   transition: transform 82ms ease-out, opacity 82ms ease-out !important;
-  background: var(--toolbar-bgcolor) !important;  /* --lwt-accent-color for contrast */ 
   z-index: 0;
 }
 
-/* Keep Navbar on top during Findbar transform animation */
-#nav-bar {
-  z-index: 1;
-}
-
-/* Shift findbar for sliding animation */
 findbar[hidden] {
   transform: translateY  (-30px);
 }
 
+/* Reverse order of elements */
 findbar > .findbar-container {
   -moz-box-direction: reverse;
 }
 
 findbar > .findbar-container::before {
-  -moz-box-ordinal-group: 0;
-  -moz-box-flex: 1;
   display: -moz-box;  
   content: "";
+  -moz-box-flex: 1;
+  -moz-box-ordinal-group: 0;
 }
 
 findbar > .findbar-container::after { 
-  -moz-box-ordinal-group: 4;
-  -moz-box-flex: 1;
   display: -moz-box;  
   content: "";
+  -moz-box-flex: 1;
+  -moz-box-ordinal-group: 4;
 }
 
 findbar .findbar-button {
@@ -49,23 +44,22 @@ findbar .findbar-button {
 }
 
 findbar .found-matches {
-  -moz-box-ordinal-group: 2;
   display: -moz-box; 
+  margin-left: 74px !important;   /* shift to the right to align search field with address in URLbar */
   min-width: 200px;
-  text-align: right !important;
+  -moz-box-ordinal-group: 2;  
   opacity: 0.8 !important;
-  /* shift to the right to align search field with address in URLbar */
-  margin-left: 74px !important;
+  text-align: right !important;  
 }
 
 findbar .findbar-find-status {
-  -moz-box-ordinal-group: 3;
   display: none !important;
+  -moz-box-ordinal-group: 3;
 }
 
 findbar .findbar-textbox {
-  width: 32em !important;
   text-align: center !important;  
+  width: 32em !important;
 } 
 
 findbar > .findbar-container > hbox {
@@ -76,6 +70,7 @@ findbar .findbar-container > hbox > toolbarbutton {
   display: none !important;
 }
 
-
-/* Quick find - show buttons */
-/* .findbar-container > *, .findbar-container > hbox > * { display: -moz-box; } */
+/* Show buttons on Quick find */
+/* .findbar-container > *, .findbar-container > hbox > * { 
+  display: -moz-box; 
+} */
