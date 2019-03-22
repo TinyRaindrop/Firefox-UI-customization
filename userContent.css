@@ -1,7 +1,12 @@
+@import url('userContent/webpage-specific.css');
+
+/* @namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul'); */
+/* @namespace html url('http://www.w3.org/1999/xhtml'); */
+
 /**
- * Set standard colors to match ArcDark theme
+ * Set colors to match ArcDark theme
  */
-:root {
+ :root {
   --arc-dark-tabbar: #2F343F;
   --arc-dark-navbar: #404552;
   
@@ -9,26 +14,15 @@
   --scroll-track-color: #383c4a;
 
   scrollbar-color: var(--scroll-thumb-color) var(--scroll-track-color) !important;
-  scrollbar-width: thin !important;
 }
 
 /* Cheat sheet */
-/* --titlebar-bgcolor  =   titlebar - menu & tabs */
+/* --titlebar-bgcolor  =   titlebar: menu & tabs */
 /* --toolbar-bgcolor   =   navbar */
 
-/* @namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul'); */
-/* @namespace html url('http://www.w3.org/1999/xhtml'); */
 
-@-moz-document url-prefix('about:') {
-  page,
-  scrollbar {
-    /* scrollbar-color: rgb(95, 103, 118) rgb(56, 60, 74);	 */
-    scrollbar-width: thin;
-  }
-}
-
-/* Scrollbar colors and width - applied globally */
-/* *|* { scrollbar-width: thin; } */
+/* Thin scrollbars everywhere */
+*|* { scrollbar-width: thin; }
 
 
 /* More homepage styling here :

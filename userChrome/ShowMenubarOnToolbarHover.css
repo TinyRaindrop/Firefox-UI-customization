@@ -28,8 +28,3 @@
 #toolbar-menubar[autohide="false"] + #TabsToolbar .titlebar-spacer[type="post-tabs"] {
   display: -moz-box !important;
 }
-
-/* Reduce extra padding in tabs toolbar */
-.titlebar-spacer[type="post-tabs"] {
-  width: 10px !important;
-}

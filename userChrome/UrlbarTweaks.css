@@ -49,6 +49,11 @@
   display: none !important;
 }
 
+/* Remove placeholder text in the address bar */
+.urlbar-input-box > .urlbar-input::placeholder {
+  opacity: 0 !important;
+} 
+
 /* Give the address bar darker background in a private browsing window. */
 #main-window[privatebrowsingmode="temporary"] #urlbar
 {

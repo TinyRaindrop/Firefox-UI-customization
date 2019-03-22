@@ -17,7 +17,7 @@
 
 
 /* Is namespace even needed? */
-/* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 
 /* Remove extra padding from tabs toolbar */
@@ -29,7 +29,6 @@
   width: 10px !important;
 }
 
-
 /* Minimal Popup scrollbars */ 
 /* https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/minimal_popup_scrollbars.css */
 .panel-subview-body, 
@@ -39,12 +38,10 @@
   scrollbar-width: thin !important;
 }
 
-
 /* Disable Fullscreen warning */
 #fullscreen-warning {
   display: none !important;
 }
-
 
 /* Whiteflash fix */
 #browser vbox#appcontent tabbrowser,
@@ -57,8 +54,7 @@ browser[type=content] > html {
 
 /**
  * Compact Sidebar Bookmarks for Firefox Quantum
- * Github: https://github.com/rkocman/Firefox-Sidebar-Tweak
- * Tested on: Windows 7/10, Firefox 59+
+ * https://github.com/rkocman/Firefox-Sidebar-Tweak
  */
 
 #sidebar-header {
@@ -80,5 +76,3 @@ browser[type=content] > html {
     padding-inline-start: 0 !important;
     padding-inline-end: 2px !important;
 }
-
-
