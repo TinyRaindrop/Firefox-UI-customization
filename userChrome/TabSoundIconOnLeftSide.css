@@ -6,10 +6,10 @@
  */
 
 .tab-icon-sound {
-  border-radius: 50% !important;
+  -moz-box-ordinal-group: 0 !important;
   margin: initial !important;
   margin-right: -16px !important;
-  -moz-box-ordinal-group: 0 !important;
+  border-radius: 50% !important;
   opacity: 1 !important;
   transform: translate(35%, -35%) !important;
 }

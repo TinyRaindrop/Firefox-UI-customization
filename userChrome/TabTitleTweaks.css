@@ -28,8 +28,8 @@
 }
 
 .tabbrowser-tab[attention] > .tab-stack > .tab-background > .tab-bottom-line {
-	background: linear-gradient(to right, transparent 33%, #1abc9c 35% 65%, transparent 67%) !important;
 	height: 1px !important;
+	background: linear-gradient(to right, transparent 33%, #1abc9c 35% 65%, transparent 67%) !important;
 }
 
 /* Make tabs wider */

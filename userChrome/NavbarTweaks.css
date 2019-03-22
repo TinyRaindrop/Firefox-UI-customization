@@ -4,9 +4,9 @@
 
 /* Remove border between Tabs and NavBar */
 #nav-bar {
+  margin-bottom: -1px !important;
   border: none !important;
   box-shadow: none !important;
-  margin-bottom: -1px !important;
 }   
 
 /* Keep Navbar on top during Findbar/Bookmark bar sliding animations */

@@ -3,16 +3,14 @@
  */
 
 #PersonalToolbar {
-/*   visibility: collapse !important; */
-  opacity: 0 !important;
   position: fixed !important;
   bottom: 0;
   width: 100%;
   height: 32px;
-/*   padding-bottom: 4px !important; */
-/*   transform: translateY(-30px); */
-/*   z-index: 0 !important; */
-  transition: min-height 170ms ease-out, max-height 170ms ease-out, 
+  /*   padding-bottom: 4px !important; */
+  opacity: 0 !important;
+  transition: min-height 170ms ease-out, 
+              max-height 170ms ease-out, 
               background-color 0.1s cubic-bezier(.17,.67,.83,.67),
               opacity 50ms ease-out !important;
   -moz-window-dragging: no-drag;
@@ -23,7 +21,7 @@
   height: 32px !important;  
 }
 
-/* Center bookmarks on the bar */
+/* TODO: Center bookmarks on the bar */
 /* #PersonalToolbar #PlacesToolbar #PlacesToolbarItems {
   
 } */
