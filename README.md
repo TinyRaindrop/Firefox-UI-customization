@@ -14,13 +14,13 @@ Changing Firefox interface with userChrome.css and userContent.css.
 - bookmarks bar on newtab page on hover
 - background image on newtab page
 
-Some colors might be hardcoded to match the theme I use - [ArcDark](https://addons.mozilla.org/en-US/firefox/addon/arc-dark-theme-we/).
+Some colors might be hardcoded to match the theme I use ([ArcDark](https://addons.mozilla.org/en-US/firefox/addon/arc-dark-theme-we/)).
 
 ## Installing
 
-Copy contents into `[yourFirefoxProfile]\chrome` folder. 
+Copy contents into `yourFirefoxProfile\chrome` folder. 
 
-`[yourFirefoxProfile]` can be accessed from **about:support** -> Profile Folder.
+`yourFirefoxProfile` can be accessed from `about:support -> Profile Folder`.
 
 ## Examples
 
