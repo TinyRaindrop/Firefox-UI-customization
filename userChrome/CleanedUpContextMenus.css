@@ -2,25 +2,25 @@
  * Cleaner Context Menu
  */
 
-/* page menu */
-#contentAreaContextMenu #context-openlink,    /* in new window */
-#contentAreaContextMenu #context-bookmarklink,
-#contentAreaContextMenu #context-savelinktopocket,
-#contentAreaContextMenu #context-pocket,
-#contentAreaContextMenu #context-sendimage,
-#contentAreaContextMenu #context-sep-sendpagetodevice,
-#contentAreaContextMenu #context-setDesktopBackground,
-#contentAreaContextMenu #context-selectall,
-#contentAreaContextMenu #context-viewsource,
-#contentAreaContextMenu #inspect-separator {
+/* page menu - #contentAreaContextMenu */
+#context-openlink,    /* in new window */
+#context-bookmarklink,
+#context-savelinktopocket,
+#context-pocket,
+#context-sendimage,
+#context-sep-sendpagetodevice,
+#context-setDesktopBackground,
+#context-selectall,
+#context-viewsource,
+#inspect-separator {
   display: none !important; 
 }
 
-/* tab menu */
-#tabContextMenu #context_toggleMuteTab,
-#tabContextMenu #context_moveTabOptions,
-#tabContextMenu #context_undoCloseTab,
-#tabContextMenu #context_closeTab { 
+/* tab menu - #tabContextMenu */
+#context_toggleMuteTab,
+#context_moveTabOptions,
+#context_undoCloseTab,
+#context_closeTab { 
   display: none !important; 
 }
 
@@ -36,5 +36,16 @@
 /*#BMB_bookmarksShowAll,  */
 #BMB_viewBookmarksToolbar + menuseparator,
 #BMB_mobileBookmarks + menuseparator {
+  display: none !important;
+}
+
+/**
+ * Cleaner hamburgher menu
+ */
+#appMenu-edit-controls,
+#appMenu-edit-controls + spacer,
+#appMenu-open-file-button,
+#appMenu-find-button,
+#appMenu-quit-button {
   display: none !important;
 }
