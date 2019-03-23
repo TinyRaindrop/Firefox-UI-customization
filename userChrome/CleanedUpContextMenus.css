@@ -43,9 +43,10 @@
  * Cleaner hamburgher menu
  */
 #appMenu-edit-controls,
-#appMenu-edit-controls + spacer,
+#appMenu-edit-controls + toolbarseparator,
 #appMenu-open-file-button,
 #appMenu-find-button,
+#appMenu-help-button + toolbarseparator,
 #appMenu-quit-button {
   display: none !important;
 }
