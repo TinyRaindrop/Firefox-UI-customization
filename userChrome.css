@@ -1,5 +1,4 @@
 @import "userChrome/AddonsOverflowMenu.css";
-@import "userChrome/BookmarkToolbarOnNewTab.css";
 @import "userChrome/CleanedUpContextMenus.css";
 @import "userChrome/DarkModalPrompts.css";
 @import "userChrome/FindbarTopCentered.css";
@@ -11,6 +10,7 @@
 @import "userChrome/UrlbarTweaks.css";
 
 /* Disabled */
+/* @import "userChrome/BookmarkToolbarOnNewTab.css"; */
 /* @import "./FlagMultiSelectedTabs.css"; */
 /* @import "./ResponsiveTabWidth.css"; */
 /* @import "./ShowMenubarOnToolbarHover.css"; */
