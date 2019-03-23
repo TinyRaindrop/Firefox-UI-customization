@@ -1,3 +1,6 @@
+@import url('userContent/about-reader.css');
+@import url('userContent/error-pages.css');
+@import url('userContent/view-source.css');
 @import url('userContent/webpage-specific.css');
 
 /* @namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul'); */
@@ -7,11 +10,12 @@
  * Set colors to match ArcDark theme
  */
  :root {
-  --arc-dark-tabbar: #2F343F;
-  --arc-dark-navbar: #404552;
+  --arc-dark-tabbar: #2f343f;
+  --arc-dark-navbar: #383c4a;
+  /* --arc-dark-navbar: #404552;   // what is this color? */
   
   --scroll-thumb-color: #5f6776;
-  --scroll-track-color: #383c4a;
+  --scroll-track-color: var(--arc-dark-navbar);
 
   scrollbar-color: var(--scroll-thumb-color) var(--scroll-track-color) !important;
 }
@@ -101,32 +105,3 @@
 
 } 
 
-/* --- View source --- */
-@-moz-document url-prefix(view-source:) {
-  html {
-    background: #222 !important;
-    color: #ccc !important
-  }
-
-  .attribute-name {color: #093 !important}
-  .start-tag, .end-tag {color: #f93 !important}
-  .attribute-value {color: #09f !important}
-}
-
-/* --- Error page --- */
-body.neterror,
-body.certerror {
-  background-color: var(--arc-dark-tabbar) !important;
-  color: #fffc !important;
-}
-
-body.neterror #errorPageContainer h1,
-body.certerror #errorPageContainer h1,
-body.neterror #errorPageContainer button,
-body.certerror #errorPageContainer button {
-  color: inherit !important;
-}
-
-body.certerror #badCertAdvancedPanel {
-  background-color: var(--arc-dark-navbar) !important;
-}
