@@ -1,4 +1,9 @@
-/* NAVBAR */
+@import 'General/clean_up_context_menus.css';
+@import 'General/compact_sidebar.css';
+@import 'General/dark_background_on_loading_pages.css';
+@import 'General/dark_modal_prompts.css';
+@import 'General/findbar_top_centered.css';
+
 /* @import 'Navbar/identitybox_colored_background.css'; */
 @import 'Navbar/identitybox_colored_line.css';
 @import 'Navbar/menu_buttons_rotate_on_click.css';
@@ -8,27 +13,17 @@
 @import 'Navbar/urlbar_centered_address.css';
 /* @import 'Navbar/urlbar_text_selection_color.css'; */
 
-/* TABS */
 @import 'Tabs/dim_discarded_tabs.css';
 /* @import 'Tabs/dynamic_tab_width.css'; */
 /* @import 'Tabs/flag_multi_selected_tabs.css'; */
-@import 'Tabs/highlight_shared_or_changed_tabs.css';
-@import 'Tabs/reduce_tab_title_shadow.css';
 @import 'Tabs/remove_extra_padding.css';
 @import 'Tabs/subtle_tab_separators.css';
 @import 'Tabs/tab_close_button_on_hover_only.css';
 @import 'Tabs/tab_sound_icon_above_favicon.css';
+@import 'Tabs/tab_title_appearence.css';
 
-/* TOOLBARS */
 /* @import 'Toolbars/bookmark_toolbar_on_bottom_of_newtab.css'; */
 /* @import 'Toolbars/menubar_visible_on_hover.css'; */
-
-/* GENERAL */
-@import 'General/clean_up_context_menus.css';
-@import 'General/compact_sidebar.css';
-/* @import 'General/dark_background_on_loading_pages.css'; */
-@import 'General/dark_modal_prompts.css';
-@import 'General/findbar_top_centered.css';
 
 /* Is namespace even needed? */
 /* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
