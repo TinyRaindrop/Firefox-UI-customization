@@ -1,0 +1,31 @@
+@-moz-document url('about:addons') {
+ /* url-prefix(chrome://mozapps/content/extensions/extensions.xul) */
+
+/* Firefox Quantum userChrome.css tweaks
+   Github: https://github.com/aris-t2/customcssforfx */
+
+/* Don't dim disabled addon's icon */   
+	richlistitem[active="false"] .icon {
+	  filter: unset !important;
+	}
+
+/* Always show 'Recently updated' */
+	#category-recentUpdates[disabled] {
+	  overflow: visible !important;
+	  height: 48px !important;
+	  min-height: 48px !important;
+	  opacity: 1 !important;
+	  transition-property: unset !important;
+	  transition-duration: unset !important;
+	  -moz-user-input: unset !important;
+	}
+	
+	#category-recentUpdates[hidden] {
+	  opacity: 1 !important;
+	  min-height: 48px !important;
+	  height: 48px !important;
+	  display: inherit !important;
+	  transition: unset !important;
+	}
+
+}
