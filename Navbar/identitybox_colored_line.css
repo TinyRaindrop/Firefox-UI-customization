@@ -1,0 +1,38 @@
+/**
+ * Add a colored line to the right of identity box to indicate insecure connection
+ * Example: https://i.imgur.com/WceMwmO.png
+ */
+
+:root {
+  --urlbar-separator-color-notsecure: #f03d;
+  --urlbar-separator-color-unsafe: #f90d;
+}
+
+/*
+ * States of #identity-box
+ * 1. Secure: verifiedDomain / verifiedIdentity / mixedActiveBlocked   
+ * 2. Unsafe: mixedDisplayContent / mixedDisplayContentLoadedActiveBlocked / weakCipher / certUserOverridden
+ * 3. NotSecure: notSecure / insecureLoginForms / mixedActiveContent
+ */
+
+/* NOT SECURE: unencrypted HTTP */
+/* #urlbar[pageproxystate="valid"] :-moz-any(.verifiedDomain,.verifiedIdentity) #connection-icon  */
+#urlbar[pageproxystate="valid"] > #identity-box.notSecure,
+#urlbar[pageproxystate="valid"] > #identity-box.insecureLoginForms,
+#urlbar[pageproxystate="valid"] > #identity-box.mixedActiveContent {
+  border-inline-end: 1px solid !important;
+  border-image: linear-gradient(transparent 15%, var(--urlbar-separator-color-notsecure) 15%, 85%, transparent 85%) !important;
+  border-image-slice: 1 !important;
+  /* fill: red !important; */
+}
+
+/* UNSAFE: secure HTTPS connection with not secure page elements */
+#urlbar[pageproxystate="valid"] > #identity-box.mixedDisplayContent,
+#urlbar[pageproxystate="valid"] > #identity-box.mixedDisplayContentLoadedActiveBlocked,
+#urlbar[pageproxystate="valid"] > #identity-box.weakCipher,
+#urlbar[pageproxystate="valid"] > #identity-box.certUserOverridden {
+  border-inline-end: 1px solid !important;
+  border-image: linear-gradient(transparent 15%, var(--urlbar-separator-color-unsafe) 15%, 85%, transparent 85%) !important;
+  border-image-slice: 1 !important;
+  /* fill: orange !important; */
+}

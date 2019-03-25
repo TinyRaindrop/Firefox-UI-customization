@@ -1,0 +1,31 @@
+/**
+ * Compact Sidebar Bookmarks for Firefox Quantum
+ * https://github.com/rkocman/Firefox-Sidebar-Tweak
+ */
+
+#sidebar-header {
+  padding: 4px 8px !important;
+  font-size: 1.21em !important;
+}
+#sidebar-search-container {
+  padding: 5px 8px !important;
+}
+.sidebar-placesTree treechildren::-moz-tree-row {
+  height: 1.6em !important;
+  min-height: 1.6em !important;
+  border-width: 1px !important;
+}
+.sidebar-placesTree treechildren::-moz-tree-indentation {
+  width: 10px !important;
+}
+.sidebar-placesTree treechildren::-moz-tree-twisty {
+  padding-inline-start: 0 !important;
+  padding-inline-end: 2px !important;
+}
+
+/* Thin scrollbars in sidebar */ 
+/* .panel-subview-body, */
+#bookmarksPanel scrollbar,
+#history-panel scrollbar { 
+  scrollbar-width: thin !important;
+}

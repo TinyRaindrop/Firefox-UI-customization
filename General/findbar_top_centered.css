@@ -3,20 +3,22 @@
  */
 
 findbar {
+  --findbarbutton-vertical-padding: 4px;
+  --findbar-height-negative: calc(-2 * var(--findbarbutton-vertical-padding) - 22px);
+
   -moz-box-ordinal-group: 0; 
   position: relative;
   margin-top: -4px;
-  margin-bottom: calc(-2 * var(--findbarbutton-vertical-padding) - 22px);
+  margin-bottom: var(--findbar-height-negative);
   padding-bottom: 2px;
-  --findbarbutton-vertical-padding: 4px;
   background: var(--toolbar-bgcolor) !important;  /* or --lwt-accent-color for contrast */ 
   border-top: none !important;
-  transition: transform 82ms ease-out, opacity 82ms ease-out !important;
+  transition: transform 80ms ease-out !important;
   z-index: 0;
 }
 
 findbar[hidden] {
-  transform: translateY  (-30px);
+  transform: translateY var(--findbar-height-negative);
 }
 
 /* Reverse order of elements */

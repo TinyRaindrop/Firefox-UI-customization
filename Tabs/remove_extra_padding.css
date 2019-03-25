@@ -1,0 +1,11 @@
+/**
+ * Remove extra padding from tabs toolbar 
+ */
+ 
+.titlebar-spacer[type="pre-tabs"] {
+  width: 0 !important;
+}
+
+.titlebar-spacer[type="post-tabs"] {
+  width: 10px !important;
+}

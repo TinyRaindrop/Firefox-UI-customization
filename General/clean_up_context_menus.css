@@ -1,8 +1,8 @@
 /**
- * Cleaner Context Menu
+ * Remove unnecessary elements from context and other menus
  */
 
-/* page menu - #contentAreaContextMenu */
+/* Page context Menu */
 #context-openlink,    /* in new window */
 #context-bookmarklink,
 #context-savelinktopocket,
@@ -16,7 +16,7 @@
   display: none !important; 
 }
 
-/* tab menu - #tabContextMenu */
+/* Tab context menu */
 #context_toggleMuteTab,
 #context_moveTabOptions,
 #context_undoCloseTab,
@@ -24,9 +24,7 @@
   display: none !important; 
 }
 
-/** 
- * Cleaner Bookmark menu 
- */
+/* Bookmark dropdown menu */
 #BMB_bookmarksShowAllTop, 
 #BMB_bookmarksShowAllTop + menuseparator,
 #BMB_viewBookmarksSidebar,
@@ -39,14 +37,18 @@
   display: none !important;
 }
 
-/**
- * Cleaner hamburgher menu
- */
+/* Hamburger menu */
 #appMenu-edit-controls,
 #appMenu-edit-controls + toolbarseparator,
 #appMenu-open-file-button,
 #appMenu-find-button,
 #appMenu-help-button + toolbarseparator,
 #appMenu-quit-button {
+  display: none !important;
+}
+
+/* Page action menu (...) on the right side of URLbar */
+#pageAction-panel-bookmark,
+#pageAction-panel-copyURL {
   display: none !important;
 }

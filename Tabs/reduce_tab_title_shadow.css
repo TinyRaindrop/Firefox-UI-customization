@@ -1,0 +1,12 @@
+/** 
+ * Reduce tab title shadow
+ */
+
+.tabbrowser-tab:not([pinned]) .tab-content {
+  padding-inline-end: 6px !important;
+}
+
+.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]), 
+.tab-label-container[textoverflow]:not([labeldirection]):not([pinned]):-moz-locale-dir(ltr) {
+	mask-image: linear-gradient(to left, transparent, black 1.3em) !important;
+}

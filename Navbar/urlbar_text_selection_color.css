@@ -1,0 +1,6 @@
+/* URLbar text selection colors */
+
+#urlbar ::-moz-selection, .searchbar-textbox ::-moz-selection {
+  background-color: #A9D1FF !important;
+  color: #000 !important;
+}

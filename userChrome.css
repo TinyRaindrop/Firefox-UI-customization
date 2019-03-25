@@ -1,75 +1,34 @@
-@import "userChrome/AddonsOverflowMenu.css";
-@import "userChrome/CleanedUpContextMenus.css";
-@import "userChrome/DarkModalPrompts.css";
-@import "userChrome/FindbarTopCentered.css";
-@import "userChrome/NavbarTweaks.css";
-@import "userChrome/OperaStyleTabSeparators.css";
-@import "userChrome/TabCloseButtonOnHover.css";
-@import "userChrome/TabSoundIconOnLeftSide.css";
-@import "userChrome/TabTitleTweaks.css";
-@import "userChrome/UrlbarTweaks.css";
+/* NAVBAR */
+/* @import 'Navbar/identitybox_colored_background.css'; */
+@import 'Navbar/identitybox_colored_line.css';
+@import 'Navbar/menu_buttons_rotate_on_click.css';
+@import 'Navbar/navbar_appearence.css';
+@import 'Navbar/overflow_menu_horizontal.css';
+@import 'Navbar/urlbar_appearence.css';
+@import 'Navbar/urlbar_centered_address.css';
+/* @import 'Navbar/urlbar_text_selection_color.css'; */
 
-/* Disabled */
-/* @import "userChrome/BookmarkToolbarOnNewTab.css"; */
-/* @import "./FlagMultiSelectedTabs.css"; */
-/* @import "./ResponsiveTabWidth.css"; */
-/* @import "./ShowMenubarOnToolbarHover.css"; */
+/* TABS */
+@import 'Tabs/dim_discarded_tabs.css';
+/* @import 'Tabs/dynamic_tab_width.css'; */
+/* @import 'Tabs/flag_multi_selected_tabs.css'; */
+@import 'Tabs/highlight_shared_or_changed_tabs.css';
+@import 'Tabs/reduce_tab_title_shadow.css';
+@import 'Tabs/remove_extra_padding.css';
+@import 'Tabs/subtle_tab_separators.css';
+@import 'Tabs/tab_close_button_on_hover_only.css';
+@import 'Tabs/tab_sound_icon_above_favicon.css';
+
+/* TOOLBARS */
+/* @import 'Toolbars/bookmark_toolbar_on_bottom_of_newtab.css'; */
+/* @import 'Toolbars/menubar_visible_on_hover.css'; */
+
+/* GENERAL */
+@import 'General/clean_up_context_menus.css';
+@import 'General/compact_sidebar.css';
+/* @import 'General/dark_background_on_loading_pages.css'; */
+@import 'General/dark_modal_prompts.css';
+@import 'General/findbar_top_centered.css';
 
 /* Is namespace even needed? */
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-/* Remove extra padding from tabs toolbar */
-.titlebar-spacer[type="pre-tabs"] {
-  width: 0 !important;
-}
-
-.titlebar-spacer[type="post-tabs"] {
-  width: 10px !important;
-}
-
-/* Thin scrollbars in sidebar */ 
-/* .panel-subview-body,  */
-#bookmarksPanel scrollbar,
-#history-panel scrollbar { 
-  scrollbar-width: thin !important;
-}
-
-/* Disable Fullscreen warning */
-#fullscreen-warning {
-  display: none !important;
-}
-
-/* Whiteflash fix */
-#browser vbox#appcontent tabbrowser,
-#content, 
-#tabbrowser-tabpanels,
-browser[type=content-primary],
-browser[type=content] > html { 
-  background: var(--in-content-page-background) !important;
-}
-
-
-/**
- * Compact Sidebar Bookmarks for Firefox Quantum
- * https://github.com/rkocman/Firefox-Sidebar-Tweak
- */
-
-#sidebar-header {
-  padding: 4px 8px !important;
-  font-size: 1.21em !important;
-}
-#sidebar-search-container {
-  padding: 5px 8px !important;
-}
-.sidebar-placesTree treechildren::-moz-tree-row {
-  height: 1.6em !important;
-  min-height: 1.6em !important;
-  border-width: 1px !important;
-}
-.sidebar-placesTree treechildren::-moz-tree-indentation {
-  width: 10px !important;
-}
-.sidebar-placesTree treechildren::-moz-tree-twisty {
-  padding-inline-start: 0 !important;
-  padding-inline-end: 2px !important;
-}
+/* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
