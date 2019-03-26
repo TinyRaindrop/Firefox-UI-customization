@@ -1,10 +1,10 @@
 @import url('userContent/variables.css');
 @import url('userContent/about_addons.css');
 @import url('userContent/about_newtab.css');
-@import url('userContent/about-reader.css');
-@import url('userContent/error-pages.css');
-@import url('userContent/view-source.css');
-@import url('userContent/webpage-specific.css');
+@import url('userContent/about_reader.css');
+@import url('userContent/error_pages.css');
+@import url('userContent/view_source.css');
+@import url('userContent/webpage_specific.css');
 
 /* @namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul'); */
 /* @namespace html url('http://www.w3.org/1999/xhtml'); */

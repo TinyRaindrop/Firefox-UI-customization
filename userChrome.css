@@ -1,4 +1,4 @@
-@import 'General/clean_up_context_menus.css';
+@import 'General/context_and_popup_menus.css';
 @import 'General/compact_sidebar.css';
 @import 'General/dark_background_on_loading_pages.css';
 @import 'General/dark_modal_prompts.css';
@@ -13,7 +13,6 @@
 @import 'Navbar/urlbar_centered_address.css';
 /* @import 'Navbar/urlbar_text_selection_color.css'; */
 
-@import 'Tabs/dim_discarded_tabs.css';
 /* @import 'Tabs/dynamic_tab_width.css'; */
 /* @import 'Tabs/flag_multi_selected_tabs.css'; */
 @import 'Tabs/remove_extra_padding.css';
