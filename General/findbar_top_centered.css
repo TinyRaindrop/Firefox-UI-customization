@@ -2,60 +2,51 @@
  * Findbar on top of the page with centered elements
  */
 
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
 findbar {
   --findbarbutton-vertical-padding: 4px;
-  --findbar-height-negative: calc(-2 * var(--findbarbutton-vertical-padding) - 22px);
+  --findbar-height: calc(2 * var(--findbarbutton-vertical-padding) + 22px);
+  --findbar-height-negative: calc(-1 * var(--findbar-height));
 
+  /* Large number to keep all elements centered and to prevent them from shifting when .found-mathes text changes width.
+   * Also the main thing to customize, as it requires different values depending on screen resolution and localization. */
+  --found-matches-width: 236px;   
+  
   -moz-box-ordinal-group: 0; 
-  position: relative;
-  margin-top: -4px;
-  margin-bottom: var(--findbar-height-negative);
-  padding-bottom: 2px;
-  background: var(--toolbar-bgcolor) !important;  /* or --lwt-accent-color for contrast */ 
-  border-top: none !important;
-  transition: transform 80ms ease-out !important;
+  position: fixed !important;
+  width: 100% !important;
+  border-top: none !important;  
+  background: var(--toolbar-bgcolor) !important;
+  transition: transform 120ms ease-out !important;
   z-index: 0;
 }
 
+findbar, findbar[hidden] {
+  display:-webkit-inline-box !important;
+  margin-top: -2px !important;
+  padding-bottom: 4px !important;
+}
+
 findbar[hidden] {
-  transform: translateY var(--findbar-height-negative);
+  visibility: collapse !important;
+  opacity: 1 !important;
+  transform: translateY(var(--findbar-height-negative));
 }
 
 /* Reverse order of elements */
-findbar > .findbar-container {
+.findbar-container {
   -moz-box-direction: reverse;
+  -moz-box-pack: center;
+  margin: auto;
 }
 
-findbar > .findbar-container::before {
-  -moz-box-ordinal-group: 0;
-  -moz-box-flex: 1;
-  display: -moz-box;  
-  content: "";
+.findbar-container > hbox {
+  -moz-box-ordinal-group: 1;
+  margin: 0 70px;
 }
 
-findbar > .findbar-container::after { 
-  -moz-box-ordinal-group: 4;
-  -moz-box-flex: 1;
-  display: -moz-box;  
-  content: "";
-}
-
-findbar .findbar-button {
-  -moz-box-ordinal-group: 0;
-  padding: var(--findbarbutton-vertical-padding) var(--toolbarbutton-inner-padding) !important;
-}
-
-findbar .found-matches {
-  -moz-box-ordinal-group: 2;  
-  display: -moz-box; 
-  margin-left: 74px !important;   /* shift to the right to align search field with address in URLbar */
-  min-width: 200px;
-  opacity: 0.8 !important;
-  text-align: right !important;  
-}
-
-findbar .findbar-find-status {
-  -moz-box-ordinal-group: 3;
+.findbar-container > hbox > toolbarbutton {
   display: none !important;
 }
 
@@ -64,17 +55,29 @@ findbar .findbar-textbox {
   text-align: center !important;  
 } 
 
-findbar > .findbar-container > hbox {
-  margin: 0 70px;
-}
-
-findbar .findbar-container > hbox > toolbarbutton {
-  display: none !important;
-}
-
-/* Show all elements on Quick find as well */
-.findbar-container > * { 
+findbar .found-matches {
+  -moz-box-ordinal-group: 2;  
   display: -moz-box; 
+  min-width: var(--found-matches-width) !important;
+  width: var(--found-matches-width) !important;
+  margin-inline-end: 8px !important;
+  opacity: 0.75 !important;
+  text-align: right !important;  
+}
+
+findbar .found-matches[hidden] {
+  display: -moz-box !important;
+  visibility: hidden !important;
+}
+
+findbar .findbar-button {
+  -moz-box-ordinal-group: 0;
+  display: -moz-box !important;
+  padding: var(--findbarbutton-vertical-padding) var(--toolbarbutton-inner-padding) !important;
+}
+
+findbar .findbar-find-status {
+/*   display: none !important; */
 }
 
 .findbar-container > .findbar-find-fast:not(.found-matches) {
