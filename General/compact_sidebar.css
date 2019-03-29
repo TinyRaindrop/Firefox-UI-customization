@@ -3,6 +3,8 @@
  * https://github.com/rkocman/Firefox-Sidebar-Tweak
  */
 
+@import url('../userContent/variables.css');
+
 #sidebar-header {
   padding: 4px 8px !important;
   font-size: 1.21em !important;
@@ -23,9 +25,10 @@
   padding-inline-end: 2px !important;
 }
 
-/* Thin scrollbars in sidebar */ 
-/* .panel-subview-body, */
+/* Thin scrollbars in sidebar and history popup */ 
 #bookmarksPanel scrollbar,
-#history-panel scrollbar { 
+#history-panel scrollbar,
+.panel-subview-body { 
+  scrollbar-color: var(--scroll-thumb-color) var(--scroll-track-color) !important;
   scrollbar-width: thin !important;
 }

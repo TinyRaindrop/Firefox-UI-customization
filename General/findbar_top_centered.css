@@ -76,10 +76,6 @@ findbar .findbar-button {
   padding: var(--findbarbutton-vertical-padding) var(--toolbarbutton-inner-padding) !important;
 }
 
-findbar .findbar-find-status {
-/*   display: none !important; */
-}
-
 .findbar-container > .findbar-find-fast:not(.found-matches) {
   display: none !important;
 }
