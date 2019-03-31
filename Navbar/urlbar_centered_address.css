@@ -3,29 +3,100 @@
  * Hide unnecessary elements to clean up UI.
  */
 
- #urlbar .urlbar-input-box {
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+#urlbar .urlbar-input-box {
   margin: auto !important;
   text-align: center;
 }
 
-/* 
- * Fix shifting of centered URL
- * Example - https://i.imgur.com/hCE0nQj.png 
- */
-#urlbar[pageproxystate="invalid"] > #page-action-buttons > #pageActionButton,
-#urlbar[pageproxystate="invalid"] > #page-action-buttons > #star-button-box {
-  display: -moz-box !important;
+/* Hide (i) icon */
+#identity-icon {
+  -moz-box-ordinal-group: 1;
+  opacity: 0;
+}
+
+/* When Tracking protection is inactive mimic (i) icon in its place.
+ * This is to prevent URL shifting: we always keep space for shield icon,
+ * and when Tracking protection activates it no longer increases the width of #identity-box */
+#tracking-protection-icon-box {
+  -moz-box-ordinal-group: 1;
+  visibility: visible !important;
+  margin-inline-start: -20px !important;
+  margin-inline-end: 0 !important;
+  list-style-image: url(chrome://browser/skin/identity-icon.svg);
+}
+
+#identity-box.grantedPermissions > #tracking-protection-icon-box {
+  list-style-image: url(chrome://browser/skin/identity-icon-notice.svg);
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI > #tracking-protection-icon-box {
+  list-style-image: url(chrome://branding/content/identity-icons-brand.svg);
+}
+
+#urlbar[pageproxystate="invalid"] > #identity-box > #tracking-protection-icon-box {
+  visibility: hidden !important;
+/*   list-style-image: url(chrome://browser/skin/search-glass.svg);
+  fill-opacity: .4; */
+}
+
+#urlbar[actiontype="extension"] > #identity-box > #tracking-protection-icon-box {
+  list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric-16.svg);
+}
+
+/* Coloring based on Tracking protection state */
+#tracking-protection-icon-box[active] {
+  fill: #1e0;
+}
+
+#tracking-protection-icon-box[hasException] {
+  fill: #49f;
+}
+
+#blocked-permissions-container, #notification-popup-box {
+  -moz-box-ordinal-group: 2;
+}
+
+#extension-icon {
+  -moz-box-ordinal-group: 3;
+  margin-inline-start: 6px;
+  margin-inline-end: -2px;
+}
+
+#connection-icon {
+  -moz-box-ordinal-group: 3;
+}
+
+#urlbar[pageproxystate="invalid"] > #identity-box > #connection-icon {
   visibility: hidden !important;
 }
 
-/* Show SSL certificate label only on hover */
-#identity-box:not(:hover) #identity-icon-labels {
+#identity-icon-labels {
+  -moz-box-ordinal-group: 4;
   display: none;
 }
+
+/* Show SSL certificate label only on hover */
+/* #identity-box:not(:hover) #identity-icon-labels {
+  display: none;
+} */
 
 /* Keep consistent margin across all URL states. Needed after hiding Identity label */
 #identity-box {
 	padding-inline-end: 8px !important;
+}
+
+/* Negate notification icons No-Hover policy */
+#identity-box:hover.no-hover:not([open=true]) {
+  background-color: hsla(0,0%,70%,.2);
+  fill-opacity: 0.8;
+}
+
+#identity-box:hover:active.no-hover {
+  background-color: hsla(0,0%,70%,.3);
+  fill-opacity: 0.8;
 }
 
 /* Hide useless buttons */
@@ -34,30 +105,42 @@
   display: none !important;
 }
 
-/* -------- Always have 2 icons in IdentityBox ----------- */
-
-/*#tracking-protection-icon-box > #tracking-protection-icon {
-  list-style-image: url(chrome://browser/skin/tracking-protection.svg);
-}
-
-#tracking-protection-icon-box:not([active]) {
-  -moz-box-ordinal-group: 2;
-  visibility: visible !important;
-}
-
-#tracking-protection-icon-box[active], 
-#tracking-protection-icon-box[hasException] {
-  margin-inline-start: -20px;
-}
-
-#urlbar[pageproxystate="valid"] > #identity-box > #identity-icon {
-  opacity: 0;
-}
-
-#urlbar[pageproxystate="invalid"] > #identity-box > #connection-icon {
+/* Page action buttons always occupy their space */
+#urlbar[pageproxystate="invalid"] > #page-action-buttons > #pageActionButton,
+#urlbar[pageproxystate="invalid"] > #page-action-buttons > #star-button-box {
+  -moz-box-ordinal-group: 0;
+  display: -moz-box !important;
   visibility: hidden !important;
-} */
+}
 
+/* Minimize some spacing */
+#pageActionSeparator {
+  visibility: collapse !important;
+}
+
+#page-action-buttons > :not([hidden]) ~ #pageActionSeparator {
+  visibility: visible !important;
+  margin: 0 4px !important;
+}
+
+#userContext-icons,
+#urlbar-zoom-button {
+  margin: 0 4px !important;
+}
+
+#urlbar-zoom-button {
+  -moz-box-ordinal-group: 0;
+}
+
+/* Switch to tab / extension text */
+#urlbar-display-box {
+  display: none !important;
+}
+
+/* URL prefix in case of left overflow */
+html|input.urlbar-scheme {
+  text-align: left !important;
+}
 
 
 /* "TRUE" centered URL that ignores IdentityBox and PageActions width */
