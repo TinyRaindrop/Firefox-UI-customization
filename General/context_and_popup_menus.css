@@ -51,7 +51,9 @@
 #pageAction-panel-bookmark,
 #pageAction-panel-bookmarkSeparator,
 #pageAction-panel-copyURL,
-#pageAction-panel-emailLink {
+#pageAction-panel-emailLink,
+#pageAction-panel-builtInSeparator,
+#pageAction-panel-_c607c8df-14a7-4f28-894f-29e8722976af_ {
   display: none !important;
 }
 
@@ -93,9 +95,7 @@
 
 /* page */
 #context-savepage::before {
-/*   display: -moz-box; */
   content: url(chrome://browser/skin/save.svg);
-/*   padding-inline-start: 4px; */
 }
 
 #context-sendpagetodevice::before {
@@ -302,4 +302,13 @@
     #appMenu-developer-button),
 #PanelUI-helpItems > toolbarbutton:last-of-type {
   fill: currentColor !important;
+}
+
+/**
+ * Hide some tooltips
+ */
+#back-button-tooltip,
+#forward-button-tooltip,
+#tabbrowser-tab-tooltip {
+  display: none;
 }

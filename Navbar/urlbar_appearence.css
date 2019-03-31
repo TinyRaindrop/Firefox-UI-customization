@@ -8,13 +8,13 @@
 } 
 
 /* Give the address bar darker background in a private browsing window. */
-#main-window[privatebrowsingmode="temporary"] #urlbar
+#main-window[privatebrowsingmode] #urlbar
 {
   background: #303030 !important;
 }
 
-/* Shift container label position in address bar Up Left a bit */
+/* Vertically center container label */
 #userContext-icons #userContext-label {
   margin-bottom: 4px !important;
-  margin-inline-end: 4px !important;
+/*   margin-inline-end: 4px !important; */
 }
