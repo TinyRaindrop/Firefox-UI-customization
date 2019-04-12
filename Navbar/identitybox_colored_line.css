@@ -26,7 +26,6 @@
 }
 
 /* NOT SECURE: unencrypted HTTP */
-/* #urlbar[pageproxystate="valid"] :-moz-any(.verifiedDomain,.verifiedIdentity) #connection-icon  */
 #urlbar[pageproxystate="valid"] > #identity-box.notSecure,
 #urlbar[pageproxystate="valid"] > #identity-box.insecureLoginForms,
 #urlbar[pageproxystate="valid"] > #identity-box.mixedActiveContent {

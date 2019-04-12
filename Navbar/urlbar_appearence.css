@@ -18,3 +18,12 @@
   margin-bottom: 4px !important;
 /*   margin-inline-end: 4px !important; */
 }
+
+#urlbar {
+/*   box-shadow: 0 0px 1px 1px rgba(0,0,0,0.12) !important; */
+}
+
+#urlbar:not([focused="true"]):-moz-lwtheme, 
+#urlbar.hidden-focus:-moz-lwtheme {
+  border-color: rgba(40, 40, 50, 0.4) !important;
+}

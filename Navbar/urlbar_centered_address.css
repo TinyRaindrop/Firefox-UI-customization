@@ -48,7 +48,7 @@
 
 /* Coloring based on Tracking protection state */
 #tracking-protection-icon-box[active] {
-  fill: #1e0;
+  fill: #09db00;
 }
 
 #tracking-protection-icon-box[hasException] {
@@ -69,6 +69,11 @@
   -moz-box-ordinal-group: 3;
 }
 
+/* Green lock icon refuses to obey fill-opacity, hence this workaround to match #tracking-protection-icon fill color */
+#urlbar[pageproxystate="valid"] > #identity-box:-moz-any(.verifiedDomain, verifiedIdentity, .mixedActiveBlocked):not(:hover):not([open=true]) > #connection-icon {
+  opacity: 0.8;
+}
+
 #urlbar[pageproxystate="invalid"] > #identity-box > #connection-icon {
   visibility: hidden !important;
 }
@@ -78,25 +83,28 @@
   display: none;
 }
 
-/* Show SSL certificate label only on hover */
-/* #identity-box:not(:hover) #identity-icon-labels {
-  display: none;
-} */
-
-/* Keep consistent margin across all URL states. Needed after hiding Identity label */
+/* Keep consistent margin across all URL states. Needed to ensure constant width of #identity-box */
 #identity-box {
+  margin-inline-end: 4px !important;
 	padding-inline-end: 8px !important;
 }
 
-/* Negate notification icons No-Hover policy */
-#identity-box:hover.no-hover:not([open=true]) {
-  background-color: hsla(0,0%,70%,.2);
-  fill-opacity: 0.8;
+/* Always keep the width of 2 icons, but disable pointer events on not loaded pages */
+#identity-box[class="unknownIdentity"] {
+  min-width: 52px !important;
+  opacity: 0;
+  pointer-events: none;
 }
 
-#identity-box:hover:active.no-hover {
-  background-color: hsla(0,0%,70%,.3);
-  fill-opacity: 0.8;
+/* Negate notification icons No-Hover policy */
+#identity-box:hover:not([open=true]) {
+  background-color: hsla(0,0%,70%,.2) !important;
+  fill-opacity: 0.8 !important;
+}
+
+#identity-box:hover:active {
+  background-color: hsla(0,0%,70%,.3) !important;
+  fill-opacity: 0.8 !important;
 }
 
 /* Hide useless buttons */
@@ -111,6 +119,7 @@
   -moz-box-ordinal-group: 0;
   display: -moz-box !important;
   visibility: hidden !important;
+  pointer-events: none;
 }
 
 /* Minimize some spacing */
@@ -118,10 +127,10 @@
   visibility: collapse !important;
 }
 
-#page-action-buttons > :not([hidden]) ~ #pageActionSeparator {
+/* #page-action-buttons > :not([hidden]) ~ #pageActionSeparator {
   visibility: visible !important;
   margin: 0 4px !important;
-}
+} */
 
 #userContext-icons,
 #urlbar-zoom-button {
@@ -132,31 +141,12 @@
   -moz-box-ordinal-group: 0;
 }
 
-/* Switch to tab / extension text */
+/* Don't show "Switch to tab" text */
 #urlbar-display-box {
   display: none !important;
 }
 
-/* URL prefix in case of left overflow */
+/* Fix URL prefix alignment in case of left overflow */
 html|input.urlbar-scheme {
   text-align: left !important;
 }
-
-
-/* "TRUE" centered URL that ignores IdentityBox and PageActions width */
-/* #urlbar {
-  position: relative !important;
-}
-
-#urlbar .urlbar-input-box {
-  position: absolute !important;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  width: 85%;
-}
-
-#urlbar .urlbar-input {
-  width: 100%;
-} */
-

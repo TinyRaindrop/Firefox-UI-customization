@@ -3,11 +3,12 @@
  * Remove text labels and make menu horizontal
  */
 
-#widget-overflow-fixed-list {
+#main-window:not([customizing="true"]) #widget-overflow-fixed-list {
   display: flex !important;
 }
 
-#overflowMenu-customize-button, #widget-overflow-fixed-list .toolbarbutton-text {
+#main-window:not([customizing="true"]) #widget-overflow-fixed-list .toolbarbutton-text,
+#overflowMenu-customize-button {
   display: none !important;
 }
 
