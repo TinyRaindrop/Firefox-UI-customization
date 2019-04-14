@@ -26,7 +26,7 @@
 
 .tabbrowser-tab[attention] > .tab-stack > .tab-background > .tab-bottom-line {
 	height: 1px !important;
-	background: linear-gradient(to right, transparent 33%, #1abc9c 35% 65%, transparent 67%) !important;
+	background: linear-gradient(to right, transparent 35%, #1abc9c 35% 65%, transparent 65%) !important;
 }
 
 /** 
@@ -35,5 +35,19 @@
 
 .tabbrowser-tab[pending] .tab-content:not(:hover) .tab-label {
   opacity: 0.7 !important;
+}
+
+
+/**
+ * Make tabs seamless (effect visible when hovering active tab's neighbour)
+ */
+
+.tabbrowser-tab .tab-background {
+  margin-inline-start: -1px !important;
+  margin-inline-end: -1px !important;       
+}
+
+.tabbrowser-tab:last-child .tab-background {
+	margin-inline-end: 0 !important;       
 }
 
