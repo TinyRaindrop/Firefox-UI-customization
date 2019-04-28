@@ -10,20 +10,24 @@
 }
 
 @-moz-document url('about:newtab'), url('about:home') { 
-  /* Disable scrolling on New tab page */ 	
   body {
     overflow-y: hidden !important; 
     --newtab-card-background-color: #333 !important;
-  }
-
-  /* new tab bg */
-  .outer-wrapper {
+    /* NewTab background */
     background-image: var(--newtab-background-image) !important;
     background-size: cover !important;
     background-attachment: fixed !important;
     background-position: center !important;
   }
-
+  
+  /* Hide "Top sites" title */
+  .outer-wrapper .section-top-bar .click-target-container {
+    display: none !important;
+  } 
+     
+  
+  /* ********** VARIOUS OLD CRAP ************ */
+  
   /* featured cards title bg */
   /*  .card, .prefs-pane .sidebar {
     background-color:#202020 !important;
