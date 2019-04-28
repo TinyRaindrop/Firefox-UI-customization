@@ -1,5 +1,5 @@
-@import 'General/context_and_popup_menus.css';
 @import 'General/compact_sidebar.css';
+@import 'General/context_and_popup_menus.css';
 @import 'General/dark_background_on_loading_pages.css';
 @import 'General/dark_modal_prompts.css';
 @import 'General/findbar_top_centered.css';
@@ -22,7 +22,30 @@
 @import 'Tabs/tab_title_appearence.css';
 
 /* @import 'Toolbars/bookmark_toolbar_on_bottom_of_newtab.css'; */
+@import 'Toolbars/floating_navigatortoolbox_in_fullscreen.css';
 /* @import 'Toolbars/menubar_visible_on_hover.css'; */
 
 /* Is namespace even needed? */
-/* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* :focus {outline:none !important;}
+::-moz-focus-inner {border:0 !important; } */
+
+
+/**
+ * Work-in-progress stuff 
+ */
+
+/* #statuspanel-label {  
+  background-color: var(--toolbar-bgcolor) !important;
+  color: #ccc !important;
+  border: none !important;
+} */
+
+/* #window-controls {
+  display: -moz-box !important;
+}
+
+.titlebar-buttonbox-container {
+  visibility: collapse !important;
+} */
