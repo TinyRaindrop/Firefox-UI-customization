@@ -9,3 +9,10 @@
 .titlebar-spacer[type="post-tabs"] {
   width: 10px !important;
 }
+
+/**
+ * Remove tab overflow scroll buttons 
+ */
+.scrollbutton-up, .scrollbutton-down {
+  display: none;
+}
