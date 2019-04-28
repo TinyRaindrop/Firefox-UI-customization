@@ -1,0 +1,56 @@
+/**
+ * Make #navigator-toolbox float over page content in fullscreen mode
+ * Original code provided by am803
+ * https://www.reddit.com/r/FirefoxCSS/comments/bhbvhj/make_navigatortoolbox_appear_on_top_of_page/elrzrq3/
+ */
+
+/* Disable native toggler that triggers JS listener */
+#fullscr-toggler {
+  pointer-events: none;
+}
+
+/* Force bgcolor to prevent transparent tabbar */
+#titlebar {
+  background-color: var(--lwt-accent-color) !important;
+}
+  
+:root[inFullscreen] #navigator-toolbox {
+  margin-top: calc(-40px - var(--tab-min-height)) !important;
+  transition: all .2s ease .2s !important;
+  z-index: 1;
+}
+
+:root[inFullscreen] #navigator-toolbox::after {
+  height: 2px;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+:root[inFullscreen] #navigator-toolbox:focus-within,
+:root[inFullscreen] #navigator-toolbox:hover {
+  margin-top: 0 !important;
+  transition-delay: 0s !important;
+}
+
+:root[inFullscreen] #navigator-toolbox:focus-within::after,
+:root[inFullscreen] #navigator-toolbox:hover::after {
+  height: 30px;
+}
+
+:root[inFullscreen] #content-deck {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+:root[inFullscreen] #content-deck > #browser {
+  width: 100%;
+  height: 100%;
+} 
+
+/* To match non-fullscreen #titlebar-buttonbox-container on Win8 */
+#window-controls {
+  margin-inline-start: 8px;
+}
