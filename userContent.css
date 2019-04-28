@@ -4,6 +4,7 @@
 @import url('userContent/about_reader.css');
 @import url('userContent/error_pages.css');
 @import url('userContent/view_source.css');
+/* @import url('userContent/addon_styling.css'); */
 @import url('userContent/webpage_specific.css');
 
 /* @namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul'); */
@@ -16,3 +17,7 @@
 }
 
 * { scrollbar-width: thin !important }
+
+/* Disable outlines on focused elements (links/buttons) */
+:focus { outline: none; }
+::-moz-focus-inner { border: 0; }
