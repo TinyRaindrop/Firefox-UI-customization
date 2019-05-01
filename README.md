@@ -4,23 +4,32 @@ Changing Firefox interface with userChrome.css and userContent.css.
 
 ## Features
 
-- centered URL
-- top of the page centered findbar
+- centered address in urlbar
+- floating centered findbar on the top of the page
 - subtle tab separators
-- tab close button on hover
+- tab close button visible only on hover
+- unnecessary buttons removed
+- context menus cleaned up
 - dark thin scrollbars
 - dark JS alerts/prompts
-- context menus cleaned up
+- dark viewsource and error pages
 - bookmarks bar on newtab page on hover
 - background image on newtab page
+- floating navbar in fullscreen mode
+- compact addons overflow menu
+- 
 
 Some colors might be hardcoded to match the theme I use ([ArcDark](https://addons.mozilla.org/en-US/firefox/addon/arc-dark-theme-we/)).
 
-## Installing
+## Installation
 
-Copy contents into `yourFirefoxProfile\chrome` folder. 
+1. Open your profile from `about:support > Profile Folder`.
+2. Inside create a folder named `chrome`.
+3. Copy contents of this repository into this `chrome` folder.
 
-`yourFirefoxProfile` can be accessed from `about:support -> Profile Folder`.
+Comment out `@import` lines in `userChrome.css` and `userContent.css` to disable certain tweaks. Such as 
+
+`/*@import url('userContent/about_newtab.css');*/`
 
 ## Examples
 
@@ -31,7 +40,9 @@ Copy contents into `yourFirefoxProfile\chrome` folder.
 
 Min/max/close buttons stand out because on my Windows 8.1 they are controlled by OS and cannot be changed by Firefox.
 
-## Big thanks to
+## Other great custom Firefox UI projects
 
-- [MrOtherGuy](https://github.com/MrOtherGuy/firefox-csshacks)
-- [Izheil](https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme)
+- [Firefox csshacks](https://github.com/MrOtherGuy/firefox-csshacks)
+- [UserChrome Tweaks](https://github.com/Timvde/UserChrome-Tweaks)
+- [Quantum Nox](https://github.com/Izheil/Quantum-Nox-Firefox-Dark-Full-Theme)
+- [CustomCSSforFx](https://github.com/Aris-t2/CustomCSSforFx)
