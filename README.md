@@ -17,7 +17,6 @@ Changing Firefox interface with userChrome.css and userContent.css.
 - background image on newtab page
 - floating navbar in fullscreen mode
 - compact addons overflow menu
-- 
 
 Some colors might be hardcoded to match the theme I use ([ArcDark](https://addons.mozilla.org/en-US/firefox/addon/arc-dark-theme-we/)).
 
