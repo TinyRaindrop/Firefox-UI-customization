@@ -7,12 +7,9 @@
 /* @import url('userContent/addon_styling.css'); */
 @import url('userContent/webpage_specific.css');
 
-/* @namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul'); */
-/* @namespace html url('http://www.w3.org/1999/xhtml'); */
-
 /* Thin scrollbars everywhere */
 :root {
-  scrollbar-color: var(--scroll-thumb-color) var(--scroll-track-color) !important;
+  scrollbar-color: var(--scroll-thumb-color) var(--scroll-track-color);
   scrollbar-width: thin !important;
 }
 
