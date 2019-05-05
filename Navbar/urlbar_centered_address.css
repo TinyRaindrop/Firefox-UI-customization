@@ -8,7 +8,10 @@
 
 #urlbar .urlbar-input-box {
   margin: auto !important;
-  text-align: center;
+}
+
+#urlbar .urlbar-input-box html|input.urlbar-input {
+  text-align: center !important;
 }
 
 /* Hide (i) icon */
@@ -149,4 +152,5 @@
 /* Fix URL prefix alignment in case of left overflow */
 html|input.urlbar-scheme {
   text-align: left !important;
+/*   display: none !important; */
 }
