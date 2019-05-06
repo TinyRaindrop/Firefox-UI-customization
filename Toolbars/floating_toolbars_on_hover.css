@@ -12,7 +12,11 @@
 /* Force bgcolor to prevent transparent tabbar */
 #TabsToolbar {
   background-color: var(--lwt-accent-color) !important;
-  -moz-window-dragging: no-drag !important;
+}
+
+/* Allow registering hover state over toolbars */
+:root:not([sizemode="normal"]) :-moz-any(#TabsToolbar, #nav-bar, #PersonalToolbar) {
+  -moz-window-dragging: no-drag !important; 
 }
   
 :root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox {
@@ -51,9 +55,10 @@
   height: 100%;
 }
 
-/* Fix strange 8px shift while not in fullscreen mode */
+/* Fix strange 10px shift while not in fullscreen mode */
 :root:not([inFullscreen]) #content-deck {
-  top: 8px;
+  top: 10px !important;;
+  height: calc(100% - 10px) !important;;
 }
 
 :root:not([sizemode="normal"]):not([customizing]) #content-deck > #browser {
@@ -67,4 +72,3 @@
     margin-inline-start: 8px;
   }
 }
-
