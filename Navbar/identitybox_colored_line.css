@@ -16,6 +16,7 @@
  */
 
 /* MIXED: secure HTTPS connection with not secure page elements */
+#urlbar[pageproxystate="valid"] > #identity-box.mixedActiveBlocked,
 #urlbar[pageproxystate="valid"] > #identity-box.mixedDisplayContent,
 #urlbar[pageproxystate="valid"] > #identity-box.mixedDisplayContentLoadedActiveBlocked,
 #urlbar[pageproxystate="valid"] > #identity-box.weakCipher,
