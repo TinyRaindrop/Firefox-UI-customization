@@ -1,60 +1,24 @@
 /**
- * Hide #nav-bar until hovered, it floats over page content (maximized window only).
- * #TabsToolbar is visible as per usual
+ * Show navbar only on hover
  */
 
-/* Allow registering hover state over toolbars */
-
-:root:not([sizemode="normal"]) :-moz-any(#TabsToolbar, #nav-bar, #PersonalToolbar) {
-  /* -moz-window-dragging: no-drag !important;  */
-}
-
 #TabsToolbar {
-  z-index: 200 !important;
+  -moz-window-dragging: no-drag !important;
 }
 
-:root:not([sizemode="normal"]):not([customizing]) #nav-bar {
-  /*   visibility: hidden; */
-  margin-top: -40px !important;
-  transition: all .2s ease .2s !important;
-  z-index: 0;
+#nav-bar:not([customizing="true"]):not([inFullscreen]) {
+	min-height: 1px !important;
+	max-height: 1px !important;
+	margin-bottom: -1px !important;
+	transition: all 180ms ease 0.5s !important;
+	z-index: -1 !important;
 }
 
-:root:not([sizemode="normal"]):not([customizing]) #nav-bar::after {
-  height: 1px;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-/* :root[customizing] #navigator-toolbox, */
-:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox:focus-within #nav-bar, 
-:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox:hover #nav-bar {
-  visibility: visible;
-  margin-top: 0 !important;
-  transition-delay: 0s !important;
-}
-
-/*:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox:focus-within::after,
-:root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox:hover::after {
-  height: 30px;
-} */
-
-:root:not([sizemode="normal"]):not([customizing]) #content-deck {
-  position: fixed;
-  z-index: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Fix strange 10px shift while not in fullscreen mode */
-
-:root:not([inFullscreen]) #content-deck {
-  top: calc(var(--tab-min-height) + 10px) !important;
-  height: calc(100% - var(--tab-min-height) - 10px) !important;
-}
-
-:root:not([sizemode="normal"]):not([customizing]) #content-deck>#browser {
-  width: 100%;
-  height: 100%;
+#navigator-toolbox:hover:not([inFullscreen]) #nav-bar,
+#navigator-toolbox:focus-within:not([inFullscreen]) #nav-bar {
+	min-height: 40px !important;
+	max-height: 40px !important;
+	margin-bottom: -40px !important;
+	transition: all 180ms ease 0s !important;
+	z-index: 1 !important;
 }
