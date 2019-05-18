@@ -12,17 +12,13 @@
 #context-setDesktopBackground,
 #context-selectall,
 #context-viewsource,
-#inspect-separator {
-  display: none !important; 
-}
+#inspect-separator,
 
 /* Tab context menu */
 #context_toggleMuteTab,
 #context_moveTabOptions,
 #context_undoCloseTab,
-#context_closeTab { 
-  display: none !important; 
-}
+#context_closeTab,
 
 /* Bookmark dropdown menu */
 #BMB_bookmarksShowAllTop, 
@@ -33,9 +29,7 @@
 /*#BMB_unsortedBookmarks, */
 /*#BMB_bookmarksShowAll,  */
 #BMB_viewBookmarksToolbar + menuseparator,
-#BMB_mobileBookmarks + menuseparator {
-  display: none !important;
-}
+#BMB_mobileBookmarks + menuseparator,
 
 /* Hamburger menu */
 #appMenu-edit-controls,
@@ -43,9 +37,12 @@
 #appMenu-open-file-button,
 #appMenu-find-button,
 #appMenu-help-button + toolbarseparator,
-#appMenu-quit-button {
-  display: none !important;
-}
+#appMenu-quit-button,
+
+/* #PanelUI-history (history button) */
+#appMenuViewHistorySidebar,
+#appMenuClearRecentHistory,
+#appMenuClearRecentHistory + toolbarseparator,
 
 /* Page action menu (...) on the right side of URLbar */
 #pageAction-panel-bookmark,
@@ -53,7 +50,8 @@
 #pageAction-panel-copyURL,
 #pageAction-panel-emailLink,
 #pageAction-panel-builtInSeparator,
-#pageAction-panel-_c607c8df-14a7-4f28-894f-29e8722976af_ {
+#pageAction-panel-_c607c8df-14a7-4f28-894f-29e8722976af_ 
+{
   display: none !important;
 }
 
