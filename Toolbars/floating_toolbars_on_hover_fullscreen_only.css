@@ -10,7 +10,7 @@
 }
 
 /* Force bgcolor to prevent transparent tabbar */
-#TabsToolbar {
+:root:not([sizemode="normal"]) #TabsToolbar {
   background-color: var(--lwt-accent-color) !important;
   -moz-window-dragging: no-drag !important;
 }
