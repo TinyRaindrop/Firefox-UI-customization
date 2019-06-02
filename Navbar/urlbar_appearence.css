@@ -7,10 +7,22 @@
   opacity: 0 !important;
 } 
 
-/* Give the address bar darker background in a private browsing window. */
+/* Give the address bar darker background in a private browsing window and tweak selection colors */
+#urlbar ::-moz-selection
+{
+  background-color: #5294F9 !important;
+  color: #fff !important;
+}
+
+#main-window[privatebrowsingmode] #urlbar ::-moz-selection
+{
+  background-color: #5a5a5a !important;
+  color: #f0f0f0 !important;
+}
+
 #main-window[privatebrowsingmode] #urlbar
 {
-  background: #303030 !important;
+  background-color: #303030 !important;
 }
 
 /* Vertically center container label */
