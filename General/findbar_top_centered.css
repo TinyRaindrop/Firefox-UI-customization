@@ -3,6 +3,7 @@
  */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
 
 findbar {
   --findbarbutton-vertical-padding: 4px;
@@ -50,7 +51,7 @@ findbar[hidden] {
   display: none !important;
 }
 
-findbar .findbar-textbox {
+findbar html|input.findbar-textbox {
   width: 32em !important;
   text-align: center !important;  
 } 
