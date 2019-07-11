@@ -186,7 +186,21 @@
   content: url(chrome://browser/skin/reload.svg);
 }
 
-/* #context_pinTab */
+/* image is too big, not showing in context menu */
+/* #context_pinTab::before,
+#context_pinSelectedTabs::before {
+  content: url(chrome://browser/skin/pin-tab.svg);
+  width: 16px;
+  height: 16px;
+}
+
+#context_unpinTab::before,
+#context_unpinSelectedTabs::before {
+  content: url(chrome://browser/skin/unpin-tab.svg);
+  width: 16px;
+  height: 16px;
+} */
+
 
 /* #context_duplicateTab */
 
@@ -239,7 +253,10 @@
   #context-viewimageinfo,
   #context-copy,
   #context_reloadTab,
-/*   #context_duplicateTab, */
+/*   #context_pinTab,
+  #context_pinSelectedTabs,
+  #context_unpinTab,
+  #context_unpinSelectedTabs, */
   #context_selectAllTabs,
   #context_sendTabToDevice) .menu-text {
   margin-inline-start: -18px !important;
@@ -306,7 +323,6 @@
  * Hide some tooltips
  */
 #back-button-tooltip,
-#forward-button-tooltip,
-#tabbrowser-tab-tooltip {
+#forward-button-tooltip {
   display: none;
 }
