@@ -2,6 +2,8 @@
 
 Changing Firefox interface with userChrome.css and userContent.css.	
 
+Up to date with Beta versions.
+
 ## Features
 
 - centered address in urlbar
