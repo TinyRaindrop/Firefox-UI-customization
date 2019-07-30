@@ -25,7 +25,7 @@
 #BMB_bookmarksShowAllTop + menuseparator,
 #BMB_viewBookmarksSidebar,
 #BMB_viewBookmarksToolbar,
-/*#BMB_bookmarksToolbar, */
+#BMB_bookmarksToolbar,
 /*#BMB_unsortedBookmarks, */
 /*#BMB_bookmarksShowAll,  */
 #BMB_viewBookmarksToolbar + menuseparator,
@@ -53,6 +53,15 @@
 #pageAction-panel-_c607c8df-14a7-4f28-894f-29e8722976af_ 
 {
   display: none !important;
+}
+
+#BMB_bookmarksToolbar,
+#BMB_unsortedBookmarks {
+  -moz-box-ordinal-group: 2;
+}
+
+#BMB_bookmarksShowAll {
+  -moz-box-ordinal-group: 3;
 }
 
 #pageAction-panel-sendToDevice {
