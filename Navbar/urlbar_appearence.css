@@ -27,8 +27,13 @@
 
 /* Vertically center container label */
 #userContext-icons #userContext-label {
-  margin-bottom: 4px !important;
-/*   margin-inline-end: 4px !important; */
+  margin-bottom: 2px !important;
+  margin-inline-end: 2px !important;
+}
+
+#userContext-icons {
+  -moz-box-ordinal-group: 99;
+  padding-right: 2px !important;
 }
 
 #urlbar {
