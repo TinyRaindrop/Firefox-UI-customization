@@ -36,11 +36,19 @@
   padding-right: 2px !important;
 }
 
-#urlbar {
-/*   box-shadow: 0 0px 1px 1px rgba(0,0,0,0.12) !important; */
-}
-
 #urlbar:not([focused="true"]):-moz-lwtheme, 
 #urlbar.hidden-focus:-moz-lwtheme {
+  border-color: rgba(40, 40, 50, 0.25) !important;
+}
+
+#urlbar:not(.hidden-focus)[focused="true"],
+#searchbar:focus-within {
   border-color: rgba(40, 40, 50, 0.4) !important;
+  box-shadow: 0 0px 1px 1px rgba(40, 40, 50, 0.15) !important;
+}
+
+#urlbar:not(.hidden-focus):-moz-lwtheme[focused="true"],
+#navigator-toolbox #searchbar:focus-within:-moz-lwtheme {
+  /* default color: rgb(60, 65, 78) */
+  background-color: rgb(63, 69, 83) !important;   
 }
