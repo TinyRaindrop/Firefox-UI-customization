@@ -1,31 +1,9 @@
-@-moz-document url('about:addons') {
+@-moz-document url("chrome://mozapps/content/extensions/aboutaddons.html") {
  /* url-prefix(chrome://mozapps/content/extensions/extensions.xul) */
-
-/* Firefox Quantum userChrome.css tweaks
-   Github: https://github.com/aris-t2/customcssforfx */
 
 /* Don't dim disabled addon's icon */   
 	richlistitem[active="false"] .icon {
 	  filter: unset !important;
-	}
-
-/* Always show 'Recently updated' */
-	#category-recentUpdates[disabled] {
-	  overflow: visible !important;
-	  height: 48px !important;
-	  min-height: 48px !important;
-	  opacity: 1 !important;
-	  transition-property: unset !important;
-	  transition-duration: unset !important;
-	  -moz-user-input: unset !important;
-	}
-	
-	#category-recentUpdates[hidden] {
-	  opacity: 1 !important;
-	  min-height: 48px !important;
-	  height: 48px !important;
-	  display: inherit !important;
-	  transition: unset !important;
 	}
 
 
@@ -33,8 +11,9 @@
  * Compact addons page 
  * by mjcov
  * https://www.reddit.com/r/FirefoxCSS/comments/bc8f07/my_compact_addons_manager_screenshot_inside/ 
+ * TODO: restyle this section
  */
- #addons-page .addon.card {
+  #addons-page .addon.card {
     max-width: 85% !important;
     padding: 4px 6px 4px 11px !important;
     margin: 0 0 8px !important;
@@ -81,5 +60,113 @@
     font-weight: 600;
     margin-left: 5px;
   }
+  
 
+/* 
+ * Show action buttons (enable/disable, options etc.)
+ * https://www.reddit.com/r/FirefoxCSS/comments/cs4yl5/show_action_buttons_enabledisable_options_etc_on/
+ */
+  panel-list {
+        border: none !important;
+        box-shadow: none !important;
+        display: inline !important;
+        min-width: unset !important;
+        padding: 0 !important;
+        right: 0px !important;
+    }
+
+    panel-item {
+        display: inline-block !important;
+        margin-inline-start: 2px !important;
+    }
+    
+    .more-options-menu {
+        margin: unset !important;
+    }
+    
+    /* link + is needed to avoid styling check for updates buttons and tabs on add-on detail pages because shadowdom */
+    link + button {
+        background-color: var(--in-content-button-background) !important;
+        background-position: center !important;
+        border-radius: 2px !important;
+        cursor: pointer !important;
+        height: 32px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;        
+    }
+    link + button:hover {
+        background-color: var(--in-content-button-background-hover) !important;
+    }
+    link + button:hover:active {
+        background-color: var(--in-content-button-background-active) !important;
+    }
+    link + button:focus {
+        box-shadow: 0 0 0 1px var(--in-content-border-active) inset, 0 0 0 1px var(--in-content-border-active), 0 0 0 4px var(--in-content-border-active-shadow) !important;
+    }
+
+    /* dot badging on update button */
+    link + button::after {
+        left: 22px !important;
+        top: 4px !important;
+    }        
+
+    /* use icons, remove text */
+    panel-item[action="remove"],
+    panel-item[action="install-update"],
+    panel-item[action="always-activate"] {
+        font-size: 0px !important;
+        position: relative !important;
+        top: -6px !important;
+        fill: var(--in-content-page-color) !important;
+        width: 32px !important;
+    }
+    
+    .more-options-button.ghost-button,
+    .arrow.top,
+    .arrow.bottom,
+    panel-item-separator,
+    panel-item[action="report"],
+    panel-item[action="expand"],
+    panel-item[hidden],
+    .addon-description {
+        display: none !important;
+    }
+    
+    .card-contents {
+        align-self: center !important;
+    }
+
+/* show counter next to "Enabled" and "Disabled" */
+    addon-list[type="extension"] section[section="0"] > addon-card {
+        counter-increment: enabled;
+    }
+    addon-list[type="extension"] section[section="1"] > addon-card {
+        counter-increment: disabled;
+    }
+    section[section="0"] {
+        counter-reset: enabledpvt; /* define scope */
+    }
+    addon-list[type="extension"] section[section="0"] > addon-card .addon-badge-private-browsing-allowed {
+        counter-increment: enabledpvt;
+    }
+    addon-list[type="extension"] section[section="0"],
+    addon-list[type="extension"] section[section="1"] {
+        position: relative !important;
+    }
+    addon-list[type="extension"] section[section="0"] > .list-section-heading,
+    addon-list[type="extension"] section[section="1"] > .list-section-heading {
+        visibility: collapse !important;
+    }
+    addon-list[type="extension"] section[section="0"]::after,
+    addon-list[type="extension"] section[section="1"]::after {
+    	content: "Увімкнено: " counter(enabled) ", в приватних вікнах: " counter(enabledpvt);
+        position: absolute !important;
+    	top: 0px !important;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    addon-list[type="extension"] section[section="1"]::after {
+    	content: "Вимкнено: " counter(disabled);
+    } 
+  
 }
