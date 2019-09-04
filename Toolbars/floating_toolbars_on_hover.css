@@ -47,7 +47,7 @@
   height: 30px;
 }
 
-:root:not([sizemode="normal"]):not([customizing]) #content-deck {
+:root:not([sizemode="normal"]):not([customizing]) #browser {
   position: fixed;
   z-index: 0;
   top: 0;
@@ -55,16 +55,17 @@
   height: 100%;
 }
 
-/* Fix strange 10px shift while not in fullscreen mode */
-:root:not([inFullscreen]) #content-deck {
-  top: 10px !important;;
-  height: calc(100% - 10px) !important;;
-}
-
-:root:not([sizemode="normal"]):not([customizing]) #content-deck > #browser {
+:root:not([sizemode="normal"]):not([customizing]) #browser > #appcontent {
   width: 100%;
   height: 100%;
 } 
+
+/* Fix strange 10px shift while not in fullscreen mode */
+:root:not([inFullscreen]) #browser {
+  top: 8px !important;
+  height: calc(100% - 10px) !important;
+}
+
 
 /* Win8: To match non-fullscreen #titlebar-buttonbox-container */
 @media (-moz-os-version: windows-win8) {
