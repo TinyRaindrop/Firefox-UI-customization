@@ -3,13 +3,23 @@
  * Remove text labels and make menu horizontal
  */
 
-#main-window:not([customizing="true"]) #widget-overflow-fixed-list {
-  display: flex !important;
+#widget-overflow-mainView .panel-subview-body {
+	display: grid;
+/*   overflow: unset; */
+	justify-items: right !important;
+  align-items: right !important;
 }
 
-#main-window:not([customizing="true"]) #widget-overflow-fixed-list .toolbarbutton-text,
+#widget-overflow-fixed-list .toolbarbutton-text, 
 #overflowMenu-customize-button {
   display: none !important;
 }
 
-/* #widget-overflow-fixed-list .toolbarbutton-badge-stack { } */
+.widget-overflow-list .toolbarbutton-1 {
+/* 	-moz-box-align: center !important;
+	-moz-box-orient: vertical !important; */
+	margin-left: 4px !important;
+	padding: 14px 0 !important;
+	width: 110px !important;
+}
+
