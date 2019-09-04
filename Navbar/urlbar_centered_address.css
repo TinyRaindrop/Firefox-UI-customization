@@ -10,80 +10,13 @@
   margin: auto !important;
 }
 
-#urlbar .urlbar-input-box html|input.urlbar-input {
+#urlbar html|input#urlbar-input {
   text-align: center !important;
 }
 
-/* Hide (i) icon */
-#identity-icon {
-  -moz-box-ordinal-group: 1;
-  opacity: 0;
-}
-
-/* When Tracking protection is inactive mimic (i) icon in its place.
- * This is to prevent URL shifting: we always keep space for shield icon,
- * and when Tracking protection activates it no longer increases the width of #identity-box */
-#tracking-protection-icon-box {
-  -moz-box-ordinal-group: 1;
-  visibility: visible !important;
-  margin-inline-start: -20px !important;
-  margin-inline-end: 0 !important;
-  list-style-image: url(chrome://browser/skin/identity-icon.svg);
-}
-
-#identity-box.grantedPermissions > #tracking-protection-icon-box {
-  list-style-image: url(chrome://browser/skin/identity-icon-notice.svg);
-}
-
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI > #tracking-protection-icon-box {
-  list-style-image: url(chrome://branding/content/identity-icons-brand.svg);
-}
-
-#urlbar[pageproxystate="invalid"] > #identity-box > #tracking-protection-icon-box {
-  visibility: hidden !important;
-/*   list-style-image: url(chrome://browser/skin/search-glass.svg);
-  fill-opacity: .4; */
-}
-
-#urlbar[actiontype="extension"] > #identity-box > #tracking-protection-icon-box {
-  list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric-16.svg);
-}
-
-/* Coloring based on Tracking protection state */
-#tracking-protection-icon-box[active] {
-  fill: #09db00;
-}
-
-#tracking-protection-icon-box[hasException] {
-  fill: #49f;
-}
-
-#blocked-permissions-container, #notification-popup-box {
-  -moz-box-ordinal-group: 2;
-}
-
-#extension-icon {
-  -moz-box-ordinal-group: 3;
-  margin-inline-start: 6px;
-  margin-inline-end: -2px;
-}
-
-#connection-icon {
-  -moz-box-ordinal-group: 3;
-}
-
-/* Green lock icon refuses to obey fill-opacity, hence this workaround to match #tracking-protection-icon fill color */
-#urlbar[pageproxystate="valid"] > #identity-box:-moz-any(.verifiedDomain, verifiedIdentity, .mixedActiveBlocked):not(:hover):not([open=true]) > #connection-icon {
-  opacity: 0.8;
-}
-
-#urlbar[pageproxystate="invalid"] > #identity-box > #connection-icon {
-  visibility: hidden !important;
-}
-
-#identity-icon-labels {
-  -moz-box-ordinal-group: 4;
-  display: none;
+/* Hide "search with Google" placeholder text */
+#urlbar html|input#urlbar-input::placeholder {
+  opacity: 0 !important;
 }
 
 /* Keep consistent margin across all URL states. Needed to ensure constant width of #identity-box */
@@ -149,8 +82,7 @@
   display: none !important;
 }
 
-/* Fix URL prefix alignment in case of left overflow */
-html|input.urlbar-scheme {
-  text-align: left !important;
-/*   display: none !important; */
-}
+/* Fix URL prefix alignment in case of left overflow | Not needed in FF 70 */
+/* html|input.urlbar-scheme {
+   text-align: left !important;
+} */
