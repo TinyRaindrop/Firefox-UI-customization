@@ -1,13 +1,12 @@
 /**
  * Show close buttons on tabs only on hover
  */
- 
+
 .tabbrowser-tab:not([pinned]) .tab-close-button {
   display: -moz-box !important;
   opacity: 0;
   visibility: collapse !important;
-  transition: opacity 0.2s ease-in !important;
-  
+  transition: opacity 0.25s, visibility 0.25s ease-in !important;
 }
 
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
