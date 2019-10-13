@@ -43,7 +43,8 @@
 
 #urlbar:not(.hidden-focus)[focused="true"],
 #searchbar:focus-within {
-  border-color: rgba(40, 40, 50, 0.4) !important;
+  /* border-color: rgba(40, 40, 50, 0.4) !important; */
+  border-color: var(--lwt-toolbar-field-border-color, hsla(240,5%,5%,.25)) !important;
   box-shadow: 0 0px 1px 1px rgba(40, 40, 50, 0.15) !important;
 }
 
