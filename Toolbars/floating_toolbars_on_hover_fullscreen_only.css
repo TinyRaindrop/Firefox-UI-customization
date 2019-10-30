@@ -16,7 +16,7 @@
 }
   
 :root[inFullscreen]:not([customizing]) #navigator-toolbox {
-  margin-top: calc(-40px - var(--tab-min-height)) !important;
+  margin-top: calc(-39px - var(--tab-min-height)) !important;
   transition: all .2s ease .2s !important;
   z-index: 1;
 }
@@ -46,7 +46,8 @@
 }
 
 :root[inFullscreen]:not([customizing]) #browser {
-  position: fixed;
+  position: fixed !important;
+  display: block;
   z-index: 0;
   top: 0;
   width: 100%;
