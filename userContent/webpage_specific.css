@@ -27,3 +27,33 @@
   }
 }
 
+
+@-moz-document url-prefix('https://translate.google.com/translate') {
+  #wtgbr {
+    display: none !important;
+  }
+  
+  #gt-appbar {
+    padding: 0 28px !important;
+  }
+  
+  #contentframe {
+    top: 24px !important;
+  }
+  
+  #gt-appname, .jfk-button, .jfk-button-standard {
+	font-size: 9px !important;
+	height: 12px !important;
+	line-height: 12px !important;
+  }
+  
+  .jfk-button-img {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  #gt-appbar, #gt-appbar-r, #gt-lang-src, #gt-lang-tgt {
+	height: 16px !important;
+  }
+}
+
