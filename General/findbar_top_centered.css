@@ -20,11 +20,15 @@ findbar {
   border-top: none !important;  
   background: var(--toolbar-bgcolor) !important;
   transition: transform 120ms ease-out !important;
-  z-index: 0;
+  z-index: 1;
+}
+
+#navigator-toolbox {
+  z-index: 2;
 }
 
 findbar, findbar[hidden] {
-  display:-webkit-inline-box !important;
+  display: -webkit-inline-box !important;
   margin-top: -2px !important;
   padding-bottom: 4px !important;
 }
