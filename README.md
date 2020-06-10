@@ -2,7 +2,7 @@
 
 Changing Firefox interface with userChrome.css and userContent.css.	
 
-Up to date with Beta versions.
+Latest update was for version **78.0b4**.
 
 ## Features
 
