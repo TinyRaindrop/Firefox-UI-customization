@@ -1,5 +1,6 @@
 /**
- * Show navbar only on hover
+ * Show navbar (ulrbar + buttons) only on hover.
+ * Tabs remain visible.
  */
 
 #TabsToolbar {
@@ -21,4 +22,8 @@
 	margin-bottom: -40px !important;
 	transition: all 180ms ease 0s !important;
 	z-index: 1 !important;
+}
+
+#urlbar, #urlbar[breakout][breakout-extend] {
+	top: calc(20px - var(--urlbar-height) / 2) !important;
 }

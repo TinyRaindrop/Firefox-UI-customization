@@ -4,7 +4,7 @@
 @import 'General/dark_modal_prompts.css';
 @import 'General/findbar_top_centered.css';
 
-/* @import 'Navbar/identitybox_colored_background.css'; */
+/* @import 'Navbar/identitybox_colored_background.css';   obsolete */    
 @import 'Navbar/identitybox_colored_line.css';
 @import 'Navbar/menu_buttons_rotate_on_click.css';
 @import 'Navbar/navbar_appearence.css';
@@ -22,10 +22,10 @@
 @import 'Tabs/tab_title_appearence.css';
 
 /* @import 'Toolbars/bookmark_toolbar_on_bottom_of_newtab.css'; */
-@import 'Toolbars/floating_toolbars_on_hover_fullscreen_only.css';
-/* @import 'Toolbars/floating_toolbars_on_hover.css'; */
-/* @import 'Toolbars/show_navbar_on_hover.css'; */
-/* @import 'Toolbars/menubar_visible_on_hover.css'; */
+/* @import 'Toolbars/menubar_visible_on_hover.css';       obsolete */
+/* @import 'Toolbars/floating_toolbars_on_hover.css';     obsolete */
+@import 'Toolbars/floating_toolbars_on_hover_fullscreen_only.css';     /* recommended, hides everything in fullscreen*/
+/*@import 'Toolbars/show_navbar_on_hover.css'; */                          /* recommended, keeps tabs but hides urlbar*/ 
 
 /* Is namespace even needed? */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
