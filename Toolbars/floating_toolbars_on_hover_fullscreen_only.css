@@ -1,8 +1,5 @@
-/**
- * Make #navigator-toolbox float over page content in fullscreen mode only
- * Original code provided by am803
- * https://www.reddit.com/r/FirefoxCSS/comments/bhbvhj/make_navigatortoolbox_appear_on_top_of_page/elrzrq3/
- */
+/* Hide the whole toolbar area unless urlbar is focused or cursor is over the toolbar */
+/* Dimensions on non-Win10 OS probably needs to be adjusted */
 
 /* Disable native toggler that triggers JS listener */
 #fullscr-toggler {
@@ -10,59 +7,55 @@
 }
 
 /* Force bgcolor to prevent transparent tabbar */
-:root:not([sizemode="normal"]) #TabsToolbar {
+#TabsToolbar {
   background-color: var(--lwt-accent-color) !important;
-  -moz-window-dragging: no-drag !important;
 }
-  
-:root[inFullscreen]:not([customizing]) #navigator-toolbox {
-  margin-top: calc(-39px - var(--tab-min-height)) !important;
-  transition: all .2s ease .2s !important;
+
+:root[inFullscreen] { margin-top: 0px !important; }
+/* :root[sizemode="maximized"] #navigator-toolbox{ margin-top: 8px } */
+
+:root[inFullscreen] #navigator-toolbox{
+  position: fixed !important;
+  display: block;
+  margin-top: 0 !important;
+  background-color: var(--lwt-accent-color, black) !important;
+  transition: transform 82ms 33ms linear, opacity 42ms 33ms linear !important;
+  transform-origin: top;
+  line-height: 0;
   z-index: 1;
 }
 
+:root[inFullscreen] #navigator-toolbox > *{ line-height: normal }
+
+:root[inFullscreen] #navigator-toolbox,
+:root[inFullscreen] #navigator-toolbox > *{
+  width: 100vw;
+  -moz-appearance: none !important;
+}
+
+:root[inFullscreen] #navigator-toolbox:not(:focus-within):not(:hover){
+  transform: rotateX(88deg);
+  opacity: 0;
+}
+
 :root[inFullscreen]:not([customizing]) #navigator-toolbox::after {
-  height: 2px;
+  height: 0;
   visibility: hidden !important;
   opacity: 0 !important;
 }
 
-:root[customizing] #navigator-toolbox,
-:root[inFullscreen]:not([customizing]) #navigator-toolbox:focus-within,
-:root[inFullscreen]:not([customizing]) #navigator-toolbox:hover
-/* causes toolbar to show on page context menu hover */
-/* :root[inFullscreen]:not([customizing]) #mainPopupSet:focus-within ~ #navigator-toolbox, */
-/* :root[inFullscreen]:not([customizing]) #mainPopupSet:hover ~ #navigator-toolbox*/
-{
-  margin-top: 0 !important;
-  transition-delay: 0s !important;
-}
-
 :root[inFullscreen]:not([customizing]) #navigator-toolbox:focus-within::after,
-:root[inFullscreen]:not([customizing]) #navigator-toolbox:hover::after
-/*:root[inFullscreen]:not([customizing]) #mainPopupSet:focus-within ~ #navigator-toolbox::after,
-  :root[inFullscreen]:not([customizing]) #mainPopupSet:hover ~ #navigator-toolbox::after */ {
-  height: 30px;
+:root[inFullscreen]:not([customizing]) #navigator-toolbox:hover::after {
+/*   height: 20px; */
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-:root[inFullscreen]:not([customizing]) #browser {
-  position: fixed !important;
-  display: block;
-  z-index: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+
+:root[customizing] #navigator-toolbox{
+	position: relative !important;
+	transform: none !important;
+	opacity: 1 !important;
 }
 
-:root[inFullscreen]:not([customizing]) #browser > #appcontent {
-  width: 100%;
-  height: 100%;
-} 
-
-/* Win8: To match non-fullscreen #titlebar-buttonbox-container */
-@media (-moz-os-version: windows-win8) {
-  #window-controls {
-    margin-inline-start: 8px;
-  }
-}
-
+#PersonalToolbar[collapsed]{ margin-block-end: -7px }
