@@ -11,6 +11,7 @@
 @import 'Navbar/overflow_menu_horizontal.css';
 @import 'Navbar/urlbar_appearence.css';
 @import 'Navbar/urlbar_centered_address.css';
+@import 'Navbar/urlbar_remove_megabar.css';
 
 /* @import 'Tabs/dynamic_tab_width.css'; */
 /* @import 'Tabs/flag_multi_selected_tabs.css'; */
@@ -82,3 +83,28 @@
   --autocomplete-popup-highlight-color: rgb(227, 234, 243) !important;
 }*/
 
+/* Sidebar autohide */ 
+/*#sidebar-box{
+  --uc-sidebar-width: 6px;
+  --uc-sidebar-hover-width: 220px;
+  position: relative;
+  min-width: var(--uc-sidebar-width) !important;
+  width: var(--uc-sidebar-width) !important;
+  max-width: var(--uc-sidebar-width) !important;
+  z-index:1;
+}
+
+#sidebar-header{ overflow: hidden; color: var(--chrome-color, inherit) !important}
+
+#sidebar{
+  transition: min-width 115ms linear !important;
+  min-width: var(--uc-sidebar-width) !important;
+  will-change: min-width;
+}
+
+#sidebar-box:hover > #sidebar{ min-width: var(--uc-sidebar-hover-width) !important; }
+
+#sidebar,
+#sidebar-header{
+  background-color: var(--toolbar-bgcolor) !important;
+}*/
