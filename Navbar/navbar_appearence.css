@@ -11,7 +11,7 @@
 
 /* Keep Navbar on top during Findbar/Bookmark bar sliding animations */
 #nav-bar {
-/*   z-index: 1; */
+  z-index: 3;
 }
 
 /* Download progress */
