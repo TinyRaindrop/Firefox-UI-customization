@@ -53,3 +53,11 @@
   /* default color: rgb(60, 65, 78) */
   background-color: rgb(63, 69, 83) !important;   
 }
+
+/* Get rid of border and shadow, blend into toolbar */
+#urlbar {
+  border: none !important;
+/*   box-shadow: none !important; */
+/*   background-color: var(--toolbar-bgcolor) !important; */
+}
+

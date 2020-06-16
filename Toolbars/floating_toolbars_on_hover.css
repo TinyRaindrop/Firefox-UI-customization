@@ -20,7 +20,7 @@
 }
   
 :root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox {
-  margin-top: calc(-40px - var(--tab-min-height)) !important;
+  margin-top: calc(-30px - var(--tab-min-height)) !important;
   transition: all .2s ease .2s !important;
   z-index: 1;
 }
@@ -44,11 +44,12 @@
 :root:not([sizemode="normal"]):not([customizing]) #navigator-toolbox:hover::after
 /*:root:not([sizemode="normal"]):not([customizing]) #mainPopupSet:focus-within ~ #navigator-toolbox::after,
   :root:not([sizemode="normal"]):not([customizing]) #mainPopupSet:hover ~ #navigator-toolbox::after */ {
-  height: 30px;
+  height: 30px !important;
 }
 
 :root:not([sizemode="normal"]):not([customizing]) #browser {
   position: fixed;
+  display: block;
   z-index: 0;
   top: 0;
   width: 100%;
