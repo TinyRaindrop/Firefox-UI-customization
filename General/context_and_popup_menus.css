@@ -121,9 +121,9 @@
   content: url(chrome://browser/skin/device-tablet.svg);
 }
 
-#context-viewinfo::before {
+/*#context-viewinfo::before {
   content: url(chrome://browser/skin/identity-icon.svg);
-}
+}*/
 
 /* #context-inspect */
 
@@ -248,7 +248,7 @@
 :-moz-any(
   #context-savepage,
   #context-sendpagetodevice,
-  #context-viewinfo,
+/*   #context-viewinfo, */
   #context-openlinkintab,
 /*   #context-openlinkinusercontext-menu, */
   #context-openlinkprivate,

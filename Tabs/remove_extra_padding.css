@@ -13,6 +13,6 @@
 /**
  * Remove tab overflow scroll buttons 
  */
-.scrollbutton-up, .scrollbutton-down {
+#scrollbutton-up, #scrollbutton-down {
   display: none;
 }
