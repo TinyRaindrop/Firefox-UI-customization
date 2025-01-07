@@ -1,40 +1,40 @@
-@import 'General/compact_sidebar.css';
-@import 'General/context_and_popup_menus.css';
-@import 'General/dark_background_on_loading_pages.css';
-@import 'General/dark_modal_prompts.css';
-@import 'General/findbar_top_centered.css';
+/* works */
+@import 'Styles/compact_sidebar.css';
+/* edit */
+@import 'Styles/context_and_popup_menus.css';
+/* not needed * @import '_deprecated/General/dark_background_on_loading_pages.css'; */
+/* not needed * @import '_deprecated/General/dark_modal_prompts.css'; */
+/* broken * @import '_deprecated/General/findbar_top_centered.css'; */
 
-/* @import 'Navbar/identitybox_colored_background.css';   obsolete */    
-@import 'Navbar/identitybox_colored_line.css';
-@import 'Navbar/menu_buttons_rotate_on_click.css';
-@import 'Navbar/navbar_appearence.css';
-@import 'Navbar/overflow_menu_horizontal.css';
-@import 'Navbar/urlbar_appearence.css';
-@import 'Navbar/urlbar_centered_address.css';
-@import 'Navbar/urlbar_remove_megabar.css';
+/* obsolete * @import '_deprecated/Navbar/identitybox_colored_background.css';  */
+/* not needed * @import '_deprecated/Navbar/identitybox_colored_line.css'; */
+@import 'Styles/menu_buttons_rotate_on_click.css';
+@import 'Styles/navbar_appearence.css';
+/* edit */
+@import 'Styles/overflow_menu_horizontal.css';
+@import 'Styles/urlbar_appearence.css';
 
-/* @import 'Tabs/dynamic_tab_width.css'; */
-/* @import 'Tabs/flag_multi_selected_tabs.css'; */
-@import 'Tabs/remove_extra_padding.css';
-@import 'Tabs/subtle_tab_separators.css';
-@import 'Tabs/tab_close_button_on_hover_only.css';
-@import 'Tabs/tab_sound_icon_above_favicon.css';
-@import 'Tabs/tab_title_appearence.css';
+/* @import '_deprecated/Tabs/dynamic_tab_width.css'; */
+/* @import '_deprecated/Tabs/flag_multi_selected_tabs.css'; */
+@import 'Styles/remove_extra_padding.css';
+/* obsolete @import '_deprecated/Tabs/subtle_tab_separators.css'; */
+@import 'Styles/tab_close_button_on_hover_only.css';
+/* obsolete @import '_deprecated/Tabs/tab_sound_icon_above_favicon.css'; */
+@import 'Styles/tab_title_appearence.css';
 
-/* @import 'Toolbars/bookmark_toolbar_on_bottom_of_newtab.css'; */
-/* @import 'Toolbars/menubar_visible_on_hover.css';       obsolete */
-/* @import 'Toolbars/floating_toolbars_on_hover.css';     obsolete */
-@import 'Toolbars/floating_toolbars_on_hover_fullscreen_only.css';     /* recommended, hides everything in fullscreen*/
-/*@import 'Toolbars/show_navbar_on_hover.css'; */                          /* recommended, keeps tabs but hides urlbar*/ 
+/* @import '_deprecated/Toolbars/bookmark_toolbar_on_bottom_of_newtab.css'; */
+/* @import '_deprecated/Toolbars/menubar_visible_on_hover.css';       obsolete */
+/* @import '_deprecated/Toolbars/floating_toolbars_on_hover.css';     obsolete */
+/* broken @import '_deprecated/Toolbars/floating_toolbars_on_hover_fullscreen_only.css'; */
+/*@import '_deprecated/Toolbars/show_navbar_on_hover.css'; */ /* recommended, keeps tabs but hides urlbar*/
 
 /* Is namespace even needed? */
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul');
 
 /* :focus {outline:none !important;}
 ::-moz-focus-inner {border:0 !important; } */
 
-
-/**
+/** 
  * Work-in-progress stuff 
  */
 
@@ -42,18 +42,6 @@
   background-color: var(--toolbar-bgcolor) !important;
   color: #ccc !important;
   border: none !important;
-} */
-
-/* Win8: show Firefox's native minimize/close buttons instead of OS styled ones */
-/* bug: #window-controls doesn't spawn in #TabsToolbar until window resize
-/* @media (-moz-os-version: windows-win8) {
-  #window-controls {
-    display: -moz-box !important;
-  }
-
-  .titlebar-buttonbox-container {
-    visibility: collapse !important;
-  }
 } */
 
 /*:root {
@@ -83,7 +71,7 @@
   --autocomplete-popup-highlight-color: rgb(227, 234, 243) !important;
 }*/
 
-/* Sidebar autohide */ 
+/* Sidebar autohide */
 /*#sidebar-box{
   --uc-sidebar-width: 6px;
   --uc-sidebar-hover-width: 220px;

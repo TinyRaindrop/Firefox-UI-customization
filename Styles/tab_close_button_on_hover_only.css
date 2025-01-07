@@ -3,10 +3,10 @@
  */
 
 .tabbrowser-tab:not([pinned]) .tab-close-button {
-  display: -moz-box !important;
+  /*! display: -moz-box !important; */
   opacity: 0;
   visibility: collapse !important;
-  transition: opacity 0.25s, visibility 0.25s ease-in !important;
+  transition: opacity 0.1s, visibility 0.1s ease-in !important;
 }
 
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {

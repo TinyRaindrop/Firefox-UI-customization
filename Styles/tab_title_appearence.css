@@ -1,0 +1,36 @@
+/** 
+ * Reduce tab title shadow
+ */
+
+ .tabbrowser-tab:not([pinned]) .tab-content {
+    padding-inline-start: 6px !important;
+    padding-inline-end: 4px !important;
+} 
+
+/*
+.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]), 
+.tab-label-container[textoverflow]:not([labeldirection]):not([pinned]):-moz-locale-dir(ltr) {
+	mask-image: linear-gradient(to left, transparent, black 1em) !important;
+} */
+
+
+
+/** 
+ * Dim discarded tabs
+ */
+
+.tabbrowser-tab[pending] .tab-content:not(:hover) .tab-label {
+  opacity: 0.75 !important;
+}
+
+
+/**
+ * Make tabs seamless (effect visible when hovering active tab's neighbour)
+ */
+
+.tabbrowser-tab .tab-background {
+  margin-inline-start: -1px !important;
+  margin-inline-end: -1px !important;       
+}
+
+

@@ -81,3 +81,17 @@ findbar .findbar-button {
 .findbar-container > .findbar-find-fast:not(.found-matches) {
   display: none !important;
 }
+
+
+/* Hide findbar after out of focus for X seconds */
+/*findbar {
+  height: 32px !important;;
+}
+
+findbar:not(:focus-within) {
+  height: 0 !important;;
+  overflow: hidden !important;
+  transition: height 0.2s ease 3s !important;
+}*/
+
+

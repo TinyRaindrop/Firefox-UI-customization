@@ -147,7 +147,7 @@
 }
 
 #context-searchselect::before {
-  content: url(chrome://browser/skin/search-glass.svg);
+  content: url(chrome://global/skin/icons/search-glass.svg);
 }
 
 #context-sendlinktodevice::before {
@@ -241,7 +241,7 @@
 /* Properly align icons */
 :-moz-any(#contentAreaContextMenu, #tabContextMenu) :-moz-any(menuitem, menu)::before {
   display: -moz-box;
-  padding-inline-start: 4px;
+  padding-inline-end: 8px;
   opacity: 0.7;
 }
 
@@ -268,7 +268,7 @@
   #context_unpinSelectedTabs, */
   #context_selectAllTabs,
   #context_sendTabToDevice) .menu-text {
-  margin-inline-start: -18px !important;
+/*   margin-inline-start: -18px !important; */
 }
 
 
